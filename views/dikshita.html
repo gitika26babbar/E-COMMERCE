@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dikshita Jindal</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <style>
+            * {
+           -moz-box-sizing: border-box;
+           -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+           -webkit-font-smoothing: antialiased;
+           -moz-osx-font-smoothing: grayscale;
+           text-rendering: optimizeLegibility;
+         }
+         
+         body {
+           background-color: #f8f8f8;
+           font-family: "Source Sans Pro", sans-serif;
+         }
+         
+         .wrapper {
+           width: 1170px;
+           margin: 102px auto 102px;
+           background-color: #ffffff;
+           -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+           -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+           box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+           max-height: 874px;
+           
+         }
+         
+         .container {
+           width: 1187px;
+           float: left;
+           
+         
+         }
+         
+         header {
+           height: 60px;
+           width: 100%;
+           padding: 12px 30px;
+           border-bottom: 1px solid #e6e6e6;
+         }
+         header .logo {
+           display: block;
+           float: left;
+           text-decoration: none;
+           color: #1a1a1a;
+           font-weight: 600;
+           text-transform: lowercase;
+           margin-top: 7px;
+         }
+         header .logo img {
+           vertical-align: middle;
+         }
+         header .logo span {
+           padding-left: 8px;
+           letter-spacing: 1px;
+         }
+         header .logo:hover span {
+           color: #0000ff;
+         }
+         header .right {
+           display: block;
+           float: right;
+         }
+         header .right input {
+           -moz-border-radius: 18px;
+           -webkit-border-radius: 18px;
+           border-radius: 18px;
+           border: 1px solid #d9d9d9;
+           width: 285px;
+           height: 36px;
+           padding-left: 17px;
+           margin-right: 50px;
+           color: #999999;
+         }
+         header .right input::-webkit-input-placeholder {
+           font-family: "Source Sans Pro", sans-serif;
+           font-size: 14px;
+           color: #999999;
+           line-height: 14px;
+         }
+         header .right input:-moz-placeholder {
+           font-family: "Source Sans Pro", sans-serif;
+           font-size: 14px;
+           color: #999999;
+           line-height: 14px;
+         }
+         header .right input::-moz-placeholder {
+           font-family: "Source Sans Pro", sans-serif;
+           font-size: 14px;
+           color: #999999;
+           line-height: 14px;
+         }
+         header .right input:-ms-input-placeholder {
+           font-family: "Source Sans Pro", sans-serif;
+           font-size: 14px;
+           color: #999999;
+           line-height: 14px;
+         }
+         header .right input:focus {
+           outline: none;
+         }
+         header .right input:focus::-webkit-input-placeholder {
+           color: transparent;
+         }
+         header .right input:focus:-moz-placeholder {
+           color: transparent;
+         }
+         header .right input:focus::-moz-placeholder {
+           color: transparent;
+         }
+         header .right input:focus:-ms-input-placeholder {
+           color: transparent;
+         }
+         header .right a {
+           color: #999999;
+           font-size: 14px;
+           text-decoration: none;
+           padding: 0 5px; 
+         }
+         header .right a:last-child {
+           padding-right: 0;
+         }
+         header .right a.active {
+           color: #0000ff;
+         }
+         
+         aside {
+           width: 315px;
+           padding: 29px 30px 0;
+           text-align: center;
+           float: left;
+         }
+         aside .profile-image {
+           margin-bottom: 27px;
+           -moz-border-radius: 50%;
+           -webkit-border-radius: 50%;
+           border-radius: 50%;
+         }
+         aside h1 {
+           font-size: 24px;
+           color: #000000;
+           font-weight: 600;
+           margin-bottom: 8px;
+           letter-spacing: 1px;
+         }
+         aside .description {
+           color: #999999;
+           display: block;
+           font-size: 14px;
+           margin-bottom: 22px;
+         }
+         aside .link {
+           text-decoration: none;
+           font-size: 14px;
+           display: block;
+           margin-bottom: 28px;
+           color: #0000ff;
+           font-weight: 600;
+         }
+         aside .follow {
+           background-color: #f2f2f2;
+           -moz-border-radius: 18px;
+           -webkit-border-radius: 18px;
+           border-radius: 18px;
+           color: #1a1a1a;
+           font-weight: 600;
+           text-decoration: none;
+           width: 125px;
+           text-align: center;
+           padding: 10px 0;
+           display: block;
+           margin: 0 auto 30px;
+         }
+         aside .follow:hover {
+           text-decoration: underline;
+         }
+         aside .social li {
+           margin-bottom: 30px;
+         }
+         aside .social li:before {
+           content: '';
+           background-color: #e6e6e6;
+           width: 65px;
+           height: 1px;
+           margin: 0 auto 28px;
+           display: block;
+         }
+         aside .social li a {
+           display: block;
+         }
+         aside .social li a img {
+           display: block;
+           margin: 0 auto;
+         }
+         aside .social li span {
+           display: block;
+         }
+         aside .social li span:first-child {
+           text-transform: uppercase;
+           color: #999999;
+           font-size: 12px;
+           margin-bottom: 8px;
+         }
+         aside .social li span:nth-child(2) {
+           font-size: 30px;
+           color: #1a1a1a;
+           font-weight: 600;
+         }
+         
+         .content {
+           border-left: 1px solid #e6e6e6;
+           min-height: 300px;
+           float: left;
+           width: 855px;
+         }
+         .content article {
+           padding: 30px 0 27px;
+           margin: 0 29px;
+           border-bottom: 1px solid #e6e6e6;
+           width: -moz-calc(100% - 60px);
+           width: -webkit-calc(100% - 60px);
+           width: -o-calc(100% - 60px);
+           width: calc(100% - 60px);
+           float: left;
+         }
+         .content article:last-child {
+           border: none;
+         }
+         .content article .thumbnail {
+           width: 320px;
+           height: auto;
+           float: left;
+         }
+         .content article .post {
+           margin-left: 30px;
+           float: left;
+           width: 444px;
+         }
+         .content article .post .info {
+           width: 100%;
+           display: block;
+         }
+         .content article .post .info .author {
+           float: left;
+         }
+         .content article .post .info .author img {
+           width: 30px;
+           height: auto;
+           -moz-border-radius: 50%;
+           -webkit-border-radius: 50%;
+           border-radius: 50%;
+           margin-right: 10px;
+           vertical-align: middle;
+           display: inline-block;
+           float: left;
+         }
+         .content article .post .info .author h5 {
+           color: #0000ff;
+           font-size: 14px;
+           display: inline-block;
+           margin-bottom: 2px;
+         }
+         .content article .post .info .author .time {
+           font-size: 12px;
+           color: #999999;
+           display: block;
+         }
+         .content article .post .info .author:hover h5 {
+           text-decoration: underline;
+         }
+         .content article .post .info .numbers {
+           float: right;
+           padding-top: 4px;
+         }
+         .content article .post .info .numbers a {
+           display: inline-block;
+           color: #999999;
+           text-decoration: none;
+         }
+         .content article .post .info .numbers a img {
+           float: left;
+           vertical-align: middle;
+           margin-right: 7px;
+         }
+         .content article .post .info .numbers a:not(first-child) {
+           margin-left: 18px;
+         }
+         .content article .post .info .numbers a:hover {
+           color: #0000ff;
+         }
+         .content article .post .post-about {
+           float: left;
+           width: 100%;
+           margin-top: 20px;
+         }
+         .content article .post .post-about h3 {
+           text-transform: capitalize;
+           font-size: 24px;
+           font-weight: 600;
+           color: #1a1a1a;
+           margin-bottom: 8px;
+           display: inline-block;
+         }
+         .content article .post .post-about h3:hover {
+           border-bottom: 2px solid #1a1a1a;
+           margin-bottom: 6px;
+         }
+         .content article .post .post-about p {
+           font: "Lora", serif;
+           color: #1a1a1a;
+           font-size: 15px;
+           line-height: 24px;
+         }
+         .content article .post .post-about a {
+           text-decoration: none;
+         }
+         .content article .post .post-about a.read-more {
+           color: #0000ff;
+           display: block;
+           text-transform: capitalize;
+           font-size: 14px;
+           margin-top: 13px;
+         }
+         .content article .post .post-about a.read-more:hover {
+           text-decoration: underline;
+         }
+         .content article > a:hover + .post h3 {
+           border-bottom: 2px solid #1a1a1a;
+           margin-bottom: 6px;
+         }
+         
+         /* Avatar image */
+         img.avatar {
+             width: 70%;
+             border-radius: 50%;
+         }
+         
+         /*-------------------------------------------------------------------------------*/
+         #containermaterial{
+           width: 100%;
+           
+           border:1px solid #f8f8f8;
+           background-color: #f8f8f8;
+         }
+         
+         #material{
+          width: 220px;
+          height: 320px;
+          border: 1px solid rgb(191, 190, 192);
+          float: left;
+          position: relative;
+          padding: 40px;
+          box-sizing: border-box;
+          margin: 20px;
+         
+         }
+         #material img{
+          position: relative;
+          -webkit-transition: width 0.4s, height 0.4s;
+          transition: width 0.4s, height 0.4s;}
+         
+         #material img:hover {
+          width: 155px;
+          height: 105px;
+         }
+         #material:hover
+         {
+         border: 2px solid gray;
+         }
+         #material figcaption{
+          text-align: center;
+          text-decoration: none;
+          font-size: 20px;
+          padding: 5px;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+         
+         }
+         #material td{
+          text-decoration: none;
+          font-size: 15px;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          color: rgb(36, 35, 37);
+         
+         }
+         #material button {
+          background-color: snow; /* Green */
+          border: 1px solid black;
+          border-radius: 10px;
+          width:100%;
+          color: black;
+          padding: 10px;
+          text-align: center;
+          text-decoration: none;
+          font-size: 16px;
+          margin: 4px 2px;
+          -webkit-transition-duration: 0.4s; /* Safari */
+          transition-duration: 0.4s;
+          cursor: pointer;
+          overflow: hidden;
+         }
+         #material button:hover{
+          background-color: rgb(10, 10, 59); 
+          color: white; 
+          border:0px solid #4CAF50;
+          box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+         }
+         </style>
+         
+  
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="container">
+        
+        <section>
+            <aside>
+
+                    <div class="imgcontainer">
+                            <img src="/images/seller1.jpg" alt="Avatar" class="avatar">
+                          </div>
+
+                <img src="https://s13.postimg.org/t1fei6r83/profile_image.png" alt="" class="profile-image" />
+                <h1 class="name">Dikshita Jindal</h1>
+                <span class="description">20 years old</span>
+                <span class="description">Category- handmade Bags, Homemade Jwellery</span>
+                
+                <span class="description">Zone: West Delhi</span>
+                <span class="description">Contact: 9087655431</span>
+
+
+
+                <a href="#" class="link">
+                  petersonwhatever@gmail.com
+                </a>
+                <a href="javascript:;" class="follow">Follow</a>
+                <ul class="social">
+                    <li>
+                        <span>Statistics</span>
+                        <span>
+                            <a href="javascript:;">
+                                <img src="https://s24.postimg.org/s67b3e0g1/twitter.png" alt="" />
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span>No. of products sold till date</span>
+                        <span>173</span>
+                    </li>
+                    <li>
+                        <span>Average Rating</span>
+                        <span>4.2/5</span>
+                    </li>
+                    <li>
+                        <span>Buisness Started In</span>
+                        <span>2012</span>
+                    </li>
+                </ul>
+</aside>
+            <div class="content">
+               
+
+
+
+                <div id="containermaterial">
+                    <div id="material">
+                <img src="/images/tea.jpg" height="100px" width="150px" >
+                <figcaption>Tea</figcaption>
+                <br>
+                
+                <table width="100%" height="auto" border="0px solid red">
+                <tr>
+                <td align="left">
+                1 kg
+                </td> 
+                <td align="right"> ₹50</td>
+                </tr>
+                <tr><td colspan="2" style="position: relative;">
+                <button > ADD TO CART </button>
+               
+                </td></tr>
+                </table>
+                </div>
+                <div id="material">
+                <img src="/images/handmade.jpg" height="100px" width="150px" >
+                <figcaption>Bags</figcaption>
+                
+                <br>
+                <table width="100%" height="auto" border="0px solid red">
+                <tr>
+                <td align="left">
+                1 kg
+                </td> 
+                <td align="right"> ₹50</td>
+                </tr>
+                <tr><td colspan="2" style="position: relative;">
+                <button > ADD TO CART </button>
+                
+                </td></tr>
+                </table>
+                </div>
+                <div id="material">
+                <img src="/images/mango.jpg" height="100px" width="150px" >
+                <figcaption>Mangoes</figcaption>
+                
+                <br>
+                <table width="100%" height="auto" border="0px solid red">
+                <tr>
+                <td align="left">
+                1 kg
+                </td> 
+                <td align="right"> ₹50</td>
+                </tr>
+                <tr><td colspan="2" style="position: relative;">
+                <button > ADD TO CART </button>
+                
+                </td></tr>
+                </table>
+                </div>
+                <div id="material">
+                <img src="/images/wool.jpg" height="100px" width="150px" >
+                <figcaption>Wool Threads</figcaption>
+                
+                <br>
+                <table width="100%" height="auto" border="0px solid red">
+                <tr>
+                <td align="left">
+                1 kg
+                </td> 
+                <td align="right"> ₹50</td>
+                </tr>
+                <tr><td colspan="2" style="position: relative;">
+                <button > ADD TO CART </button>
+                
+                </td></tr>
+                </table>
+                </div>
+                <div id="material">
+                <img src="/images/cauli.jpg" height="100px" width="150px" >
+                <figcaption>Cauliflower</figcaption> 
+                <br>
+                
+                <table width="100%" height="auto" border="0px solid red">
+                <tr>
+                <td align="left">
+                1 kg
+                </td> 
+                <td align="right"> ₹50</td>
+                </tr>
+               
+                <tr><td colspan="2" style="position: relative;">
+                <button > ADD TO CART </button>
+               
+                </td></tr>
+                </table>
+                </div>
+                
+                <div id="material">
+                <img src="/images/whe.jpg" height="100px" width="150px" >
+                <figcaption>Whole Wheat</figcaption>
+                <br>
+                
+                <table width="100%" height="auto" border="0px solid red">
+                <tr>
+                <td align="left">
+                1 kg
+                </td> 
+                <td align="right"> ₹50</td>
+                </tr>
+                <tr><td colspan="2" style="position: relative;">
+                <button > ADD TO CART </button>
+                
+                </td></tr>
+                </table>
+                </div>
+                <div id="material">
+                <img src="/images/rajma.jpg" height="100px" width="150px" >
+                <figcaption>Rajma</figcaption>
+                <br>
+                
+                <table width="100%" height="auto" border="0px solid red">
+                <tr>
+                <td align="left">
+                1 kg
+                </td> 
+                <td align="right"> ₹50</td>
+                </tr>
+                <tr><td colspan="2" style="position: relative;">
+                <button > ADD TO CART </button>
+                
+                </td></tr>
+                </table>
+                </div>
+
+
+
+            </div>
+        </section>
+    </div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <footer>
+        <div class="row">
+          <div class="col-sm-4">
+            <h4>HOME</h4>
+            <h5><a href="#">Login</a></h5>
+            <h5><a href="/signup">Register</a></h5>
+            <h5><a href="/sellers">Subscribe</a></h5>
+          </div>
+    
+          <div class="col-sm-4">
+            <h4>NEWS</h4>
+            <h5><a href="#">News Updates</a></h5>
+            <h5><a href="#">Media Coverage</a></h5>
+            
+            <h5><a href="#">Reflections</a></h5>
+            <h5><a href="#">Newsletter</a></h5>
+    
+          </div>
+          
+          <div class="col-sm-4">
+              <h4>NM LIBRARY</h4>
+              <h5><a href="/buyers">Buyers</a></h5>
+              <h5><a href="#">Sellers</a></h5>
+              
+              <h5><a href="/gallery">Gallery</a></h5>
+              <h5><a href="#">E-Greetings</a></h5>
+    
+            </div>
+        </div>
+        <div class="row" style="margin-left: 10px;">
+          <h4>Connect With Us : </h4>
+          
+          <a href="https://www.facebook.com/"><span style="height:150px;width: 50px;border-top-left-radius: 2px;
+            border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-facebook-square"></i></span></a>
+          <a href="https://www.twitter.com/"><span style="height:150px;width: 50px;border-top-left-radius: 2px;
+            border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-twitter"></i></span></a>
+          <a href="https://www.in.pinterest.com/"><span style="height:150px;width: 50px;border-top-left-radius: 2px;
+            border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-pinterest"></i></span></a>
+          <a href="https://www.plus.google.com/"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+            border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-google-plus"></i></span></a>
+          <a href="https://www.youtube.com/"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+            border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-youtube"></i></span></a>
+          <a href="https://in.linkedin.com/"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+            border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-linkedin-in"></i></span></a>
+          <a href="https://www.instagram.com/simigitika"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+            border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-instagram"></i></span></a>
+          
+    <style type="text/css">iframe.goog-te-banner-frame{ display: none !important;}</style>
+    <style type="text/css">body {position: static !important; top:0px !important;}</style>
+    <style type="text/css">.goog-te-gadget-icon{
+    background:none !important;
+    }</style>
+    <style>
+    .goog-tooltip {
+    display: none !important;
+    }
+    .goog-tooltip:hover {
+    display: none !important;
+    }
+    .goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    }
+    </style>
+    <div class="col-sm-6 col-md-6 col-lg-6" style="float:right">
+    <div id="google_translate_element" ></div><script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+    </div>
+    
+        </div>
+    </footer>
+    
+</body>
+
+</html>

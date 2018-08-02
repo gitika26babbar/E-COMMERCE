@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Employee</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Edit Product</h1>
+      <form action="/sellers/update/<%= seller._id%>" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Product Name</td>
+              <td><input type="text" name="pname" value="<%= seller.pname %>" /></td>
+            </tr>
+            <tr>
+              <td>Price</td>
+              <td>₹<input type="text" name="price" value="<%= seller.price %>" /></td>
+            </tr>
+            <tr>
+              <td>Quantity</td>
+              <td><input type="number" name="quantity" value="<%= seller.salary %>" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

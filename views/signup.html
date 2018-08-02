@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Signup</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="stylish Sign in and Sign up Form A Flat Responsive widget, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); 
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--online_fonts-->
+  <link href="//fonts.googleapis.com/css?family=Sansita:400,400i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      .form-control {
+		box-shadow: none;		
+		font-weight: normal;
+		font-size: 13px;
+	}
+	.form-control:focus {
+		border-color: #33cabb;
+		box-shadow: 0 0 8px rgba(0,0,0,0.1);
+	}
+	.navbar-header.col {
+		padding: 0 !important;
+	}	
+	.navbar {
+		background: #fff;
+		padding-left: 16px;
+		padding-right: 16px;
+		border-bottom: 1px solid #dfe3e8;
+		border-radius: 0;
+	}
+	.nav-link img {
+		border-radius: 50%;
+		width: 36px;
+		height: 36px;
+		margin: -8px 0;
+		float: left;
+		margin-right: 10px;
+	}
+	.navbar .navbar-brand, .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
+		padding-left: 0;
+		font-size: 20px;
+		padding-right: 50px;
+	}
+	.navbar .navbar-brand b {
+		font-weight: bold;
+		color: #33cabb;		
+	}
+	.navbar .form-inline {
+        display: inline-block;
+    }
+	.navbar .nav li {
+		position: relative;
+	}
+	.navbar .nav li a {
+		color: #888;
+	}
+	.search-box {
+        position: relative;
+    }	
+    .search-box input {
+        padding-right: 35px;
+		border-color: #dfe3e8;
+        border-radius: 4px !important;
+		box-shadow: none
+    }
+	.search-box .input-group-addon {
+        min-width: 35px;
+        border: none;
+        background: transparent;
+        position: absolute;
+        right: 0;
+        z-index: 9;
+        padding: 7px;
+		height: 100%;
+    }
+    .search-box i {
+        color: #a0a5b1;
+		font-size: 19px;
+    }
+	.navbar .nav .btn-primary, .navbar .nav .btn-primary:active {
+		color: #fff;
+		background: #33cabb;
+		padding-top: 8px;
+		padding-bottom: 6px;
+		vertical-align: middle;
+		border: none;
+	}	
+	.navbar .nav .btn-primary:hover, .navbar .nav .btn-primary:focus {		
+		color: #fff;
+		outline: none;
+		background: #31bfb1;
+	}
+	.navbar .navbar-right li:first-child a {
+		padding-right: 30px;
+	}
+	.navbar .nav-item i {
+		font-size: 18px;
+	}
+	.navbar .dropdown-item i {
+		font-size: 16px;
+		min-width: 22px;
+	}
+	.navbar ul.nav li.active a, .navbar ul.nav li.open > a {
+		background: transparent !important;
+	}	
+	.navbar .nav .get-started-btn {
+		min-width: 120px;
+		margin-top: 8px;
+		margin-bottom: 8px;
+	}
+	.navbar ul.nav li.open > a.get-started-btn {
+		color: #fff;
+		background: #31bfb1 !important;
+	}
+	.navbar .dropdown-menu {
+		border-radius: 1px;
+		border-color: #e5e5e5;
+		box-shadow: 0 2px 8px rgba(0,0,0,.05);
+	}
+	.navbar .nav .dropdown-menu li {
+		color: #999;
+		font-weight: normal;
+	}
+	.navbar .nav .dropdown-menu li a, .navbar .nav .dropdown-menu li a:hover, .navbar .nav .dropdown-menu li a:focus {
+		padding: 8px 20px;
+		line-height: normal;
+	}
+	.navbar .navbar-form {
+		border: none;
+	}
+	.navbar .dropdown-menu.form-wrapper {
+		width: 280px;
+		padding: 20px;
+		left: auto;
+		right: 0;
+        font-size: 14px;
+	}
+	.navbar .dropdown-menu.form-wrapper a {		
+		color: #33cabb;
+		padding: 0 !important;
+	}
+	.navbar .dropdown-menu.form-wrapper a:hover{
+		text-decoration: underline;
+	}
+	.navbar .form-wrapper .hint-text {
+		text-align: center;
+		margin-bottom: 15px;
+		font-size: 13px;
+	}
+	.navbar .form-wrapper .social-btn .btn, .navbar .form-wrapper .social-btn .btn:hover {
+		color: #fff;
+        margin: 0;
+		padding: 0 !important;
+		font-size: 13px;
+		border: none;
+		transition: all 0.4s;
+		text-align: center;
+		line-height: 34px;
+		width: 47%;
+		text-decoration: none;
+    }	
+	.navbar .social-btn .btn-primary {
+		background: #507cc0;
+	}
+	.navbar .social-btn .btn-primary:hover {
+		background: #4676bd;
+	}
+	.navbar .social-btn .btn-info {
+		background: #64ccf1;
+	}
+	.navbar .social-btn .btn-info:hover {
+		background: #4ec7ef;
+	}
+	.navbar .social-btn .btn i {
+		margin-right: 5px;
+		font-size: 16px;
+		position: relative;
+		top: 2px;
+	}
+	.navbar .form-wrapper .form-footer {
+		text-align: center;
+		padding-top: 10px;
+		font-size: 13px;
+	}
+	.navbar .form-wrapper .form-footer a:hover{
+		text-decoration: underline;
+	}
+	.navbar .form-wrapper .checkbox-inline input {
+		margin-top: 3px;
+	}
+	.or-seperator {
+        margin-top: 32px;
+		text-align: center;
+		border-top: 1px solid #e0e0e0;
+    }
+    .or-seperator b {
+		color: #666;
+        padding: 0 8px;
+		width: 30px;
+		height: 30px;
+		font-size: 13px;
+		text-align: center;
+		line-height: 26px;
+		background: #fff;
+		display: inline-block;
+		border: 1px solid #e0e0e0;
+		border-radius: 50%;
+		position: relative;
+		top: -15px;
+		z-index: 1;
+    }
+    .navbar .checkbox-inline {
+		font-size: 13px;
+	}
+	.navbar .navbar-right .dropdown-toggle::after {
+		display: none;
+	}
+	@media (min-width: 1200px){
+		.form-inline .input-group {
+			width: 300px;
+			margin-left: 30px;
+		}
+	}
+	@media (max-width: 768px){
+		.navbar .dropdown-menu.form-wrapper {
+			max-width: 100%;
+			padding: 10px 15px;
+			background: transparent;
+			border: none;
+		}
+		.navbar .form-inline {
+			display: block;
+		}
+		.navbar .input-group {
+			max-width: 100%;
+		}
+		.navbar .nav .btn-primary, .navbar .nav .btn-primary:active {
+			display: block;
+			min-width: 48px;
+			min-height: 48px;
+		}
+	}
+			
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,
+    address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,
+    i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,
+    td,article,aside,canvas,details,embed,figure,figcaption,footer,header,
+    hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+  margin:0;
+  padding:0;
+  border:0;
+  font-size:100%;
+  font:inherit;
+  vertical-align:baseline;
+}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+ol,ul {
+  list-style:none;
+  margin:0px;
+  padding:0px;
+}
+blockquote,q {
+  quotes:none;
+}
+blockquote:before,blockquote:after,q:before,q:after {
+  content:'';
+  content:none;
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* start editing from here */
+a {
+  text-decoration:none;
+}
+.txt-rt {
+  text-align:right;
+}/* text align right */
+.txt-lt {
+  text-align:left;
+}/* text align left */
+.txt-center {
+  text-align:center;
+/*-- W3Layouts --*/ 
+}/* text align center */
+.float-rt {
+  float:right;
+}/* float right */
+.float-lt {
+  float:left;
+}/* float left */
+.clear {
+  clear:both;
+}/* clear float */
+.pos-relative {
+  position:relative;
+}/* Position Relative */
+.pos-absolute {
+  position:absolute;
+}/* Position Absolute */
+.vertical-base {  
+  vertical-align:baseline;
+}/* vertical align baseline */
+.vertical-top { 
+  vertical-align:top;
+}/* vertical align top */
+nav.vertical ul li {  
+  display:block;
+}/* vertical menu */
+nav.horizontal ul li {  
+  display: inline-block;
+}/* horizontal menu */
+img {
+  max-width:100%;
+}
+
+/*--- end reset code ---*/
+body {
+  background:url(/images/bg.jpg);
+  background-repeat:no-repeat;
+  background-position:center;
+  background-attachment:fixed;
+  background-size:100% 100%;
+  -webkit-background-size:100% 100%;
+  -moz-background-size:100% 100%;
+  -o-background-size:100% 100%;
+  -ms-background-size:100% 100%;
+  font-family: 'Sansita', sans-serif;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+html {
+  overflow-y: scroll;
+}
+h1 {
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 50px 0;
+  color: #fff;
+}
+.form-head-w3l h2{
+  text-align: center;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 2px solid #3e3939;
+    margin: 0 auto;
+    background: #a0da4f;
+    text-shadow: 2px 2px 3px;
+    font-weight: 600;
+  color:#3e3939;
+}
+.form-w3ls {
+    background:#ffffff;
+  padding: 40px 50px;
+  width:35%;
+  margin:0 auto;
+}
+.tab-group {
+  list-style: none;
+    padding: 0;
+    margin: 0 0 30px 155px;
+}
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  color: #212121;
+  font-size: 20px;
+  margin-right:25px;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+.tab-group li a:hover {
+  color: #212121;
+}
+.tab-group .active a {
+  color: #212121;
+}
+.tab-content > div:last-child {
+  display: none;
+}
+.cl-effect-4 li a {
+  position:relative;
+}
+.cl-effect-4 li a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background:#a0da4f;
+  content: '';
+  opacity: 0;
+  -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+  transition: height 0.3s, opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+.cl-effect-4 li.active a::after, .cl-effect-4 li a:hover::after, .cl-effect-4 li a:focus::after {
+    height: 2px;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+}
+/*-- Sign In Form --*/
+p.header {
+    font-size: 16px;
+    font-weight: 500;
+    color: #212121;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+div#seller input[type="text"],div#seller input[type="password"],div#buyer input[type="text"],div#buyer input[type="email"],div#buyer input[type="password"],div#buyer input[type="number"],div#buyer input[type="date"],div#buyer input[type="tel"]    {
+  padding: 10px;
+    width: 100%;
+    border-bottom: 2px solid #a0da4f;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #212121;
+    text-align: left;
+    outline: none;
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-weight: 600;
+    font-family: 'Poiret One', cursive;
+    background: none;
+}
+div#seller input[type="text"]:focus,div#seller input[type="password"]:focus,div#buyer input[type="text"]:focus,div#buyer input[type="email"]:focus,div#buyer input[type="password"]:focus,div#seller input[type="tel"]:focus,div#seller input[type="date"]:focus,div#seller input[type="number"]:focus  {
+  background-color:#e5f3d1;
+  border-color:r#a0da4f;
+}
+/*--checkbox--*/
+div#seller input[type="checkbox"] {
+    display: none;
+}
+div#seller input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 2em;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #212121;
+    font-weight: 400;
+    cursor: pointer;
+}
+div#seller input[type="checkbox"]+label span:first-child {
+    width: 14px;
+    height: 14px;
+    border: 2px solid #a0da4f;
+    position: absolute;
+    left: 0;
+  background:#a0da4f;
+  top:3px;
+}
+div#seller input[type="checkbox"]:checked+label span:first-child:before {
+    content: "";
+    background: url(/images/tick.png)no-repeat;
+    position: absolute;
+    left:0px;
+    top:0px;
+    font-size: 10px;
+    width: 10px;
+    height: 10px;
+}
+
+.button1 {
+			background-color: white; 
+			color: black; 
+			border: 2px solid #4CAF50;
+		}
+							
+	.button1:hover {
+			background-color: #4CAF50;
+			color: white;
+					}
+							
+	.button2 {
+			background-color: white; 
+			color: black; 
+			border: 2px solid #008CBA;
+			}
+					
+	.button2:hover {
+			background-color: #008CBA;
+			color: white;
+				}
+					
+/*--//checkbox--*/
+div#seller .sign-in {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 100%;
+  cursor: pointer;
+  letter-spacing: 1px;
+  padding: 10px;
+  margin-top: 30px;
+  border: none;
+  outline: none;
+  color: #212121;
+  background-color: #a0da4f;
+  font-family: 'Sansita', sans-serif;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+div#seller .sign-in:hover {
+  background-color: #84bf31;
+  font-family: 'Sansita', sans-serif;
+  
+  color: #000000;
+}
+/*-- /Sign In Form --*/
+/*-- Sign Up Form --*/
+div#buyer .register {
+  padding: 10px;
+  background-color: #a0da4f;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  color: #000000;
+  outline: none;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: 'Sansita', sans-serif;
+  font-size: 20px;
+  margin-top: 5%;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+div#buyer .register:hover {
+  background-color: #84bf31;
+  color: #000000;
+}
+/*-- /Sign Up Form --*/
+p.copyright {
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 50px 0;
+  color: #fff;
+}
+p.copyright a {
+  color: #7bf904;;
+}
+p.copyright a:hover {
+  color: #b0b5a9;
+}
+
+    </style>
+</head>
+<body>
+  <div class="container-fluid">
+      <header>
+          <nav class="navbar navbar-default navbar-expand-lg navbar-light">
+            <div class="row">
+      
+        <div class="navbar-header d-flex col col-sm-3">
+          <a class="navbar-brand" href="/">
+        <img src="/images/third.jpg" style="border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;border-bottom-right-radius: 20px;
+        border-top-left-radius: 20px;height: 180px;width: 80px; padding-top: 40px;">
+          </div>
+          <div class="navbar-header d-flex col col-sm-9">
+              <b style="position: relative; margin-left: 100px;margin-top:-15px;">
+                Deendayal Antyodaya Yojana-
+                  National Urban Livelihoods Mission (DAY-NULM) <br><br>
+              <b style="position: relative; margin-left: 100px;font-size: 25px;
+              color:#850C4D;">Ministry of Housing and Urban Affairs<br><br>
+              <b style="position: relative; margin-left: 100px;">Government of India
+                          </b></a>  	
+          </div>
+        
+          <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle 
+          navbar-toggler ml-auto">
+            <span class="navbar-toggler-icon"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+          <br> <br><br><ul class="nav navbar-nav" style="position: relative;">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/about" class="nav-link">About DAY</a></li>			
+            <li class="nav-item dropdown">
+              <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">News
+                <b class="caret"></b></a>
+              <ul class="dropdown-menu">					
+                <li><a href="#" class="dropdown-item">News Updates</a></li>
+                <li><a href="#" class="dropdown-item">Media Coverage</a></li>
+                <li><a href="#" class="dropdown-item">Reflections</a></li>
+                <li><a href="#" class="dropdown-item">Newsletter</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Governance<b class="caret"></b></a>
+              <ul class="dropdown-menu">					
+                <li><a href="#" class="dropdown-item">Governance Paradigm</a></li>
+                <li><a href="#" class="dropdown-item">Global Recognition</a></li>
+                <li><a href="#" class="dropdown-item">Infographics</a></li>
+                <li><a href="#" class="dropdown-item">Insights</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav-item active"><a href="/gallery" class="nav-link">Gallery</a></li>
+            </ul>
+          <form class="navbar-form form-inline">
+            <div class="input-group search-box">								
+              <input type="text" id="search" class="form-control"
+               placeholder="Search here...">
+              <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+            </div>
+          </form>
+          <ul class="nav navbar-nav navbar-right ml-auto">			
+            <li class="nav-item" style="clear: right;">
+              <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Login</a>
+              <ul class="dropdown-menu form-wrapper">					
+                <li>
+                  <form action="/sellers/index" method="post">
+                    <p class="hint-text">Sign in with your social media account</p>
+                    <div class="form-group social-btn clearfix">
+                      <a href="#" class="btn btn-primary pull-left"><i class="fa fa-facebook"></i> Facebook</a>
+                      <a href="#" class="btn btn-info pull-right"><i class="fa fa-twitter"></i> Twitter</a>
+                    </div>
+                    <div class="or-seperator"><b>or</b></div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Username" required="required">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" placeholder="Password" required="required">
+                    </div>
+                    <center>
+                    <input type="button" class="button1" name="b" value="Buyer"  onClick="Javascript:window.location.href = '/buyers';" />	
+                    
+                    &nbsp;&nbsp; &nbsp;
+                    <!-- <script type=javascript>
+                        function buyer()
+                        {
+                            if(document.getElementById('buyer').checked== "checked")
+                            {
+                              window.location='/buyers';
+                              return false;
+                            }
+                            return true;
+                        
+                        }
+                        </script>-->
+                    <input type="button" class="button2" name="s" value="Seller"   onClick="Javascript:window.location.href = '/sellers';" /> 
+                  </center><!-- <script type=javascript>
+                        function seller()
+                        {
+                            if(document.getElementById('seller').checked== "checked")
+                            {
+                              window.location='/sellers';
+                              return false;
+                            }
+                            return true;
+                        
+                        }
+                        </script>
+                       -->
+                    <div class="form-footer">
+                      <a href="#">Forgot Your password?</a>
+                    </div>
+                  </form>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item"style="clear: right;">
+              <a href="/signup" class="btn btn-primary ">Sign up</a>
+                </li>
+      </nav>
+      </header>
+      
+  
+<div class="form-w3ls">
+  <div class="form-head-w3l">
+    <h2>su</h2>
+   
+
+  </div>
+  <ul class="tab-group cl-effect-4">
+    <li class="tab active" style="color:#a0da4f;font-size: 20px; font-weight: bold;
+    font-family: 'Poiret One', cursive;">SIGN-UP</li>      
+</ul>
+    <ul class="tab-group cl-effect-4">
+        <li class="tab active" tabOf="#seller">
+          <a class="nav-link toogleSignup" href="#seller">Seller</a></li>
+    <li class="tab" tabOf="#buyer"><a href="#buyer" class="toogleSignup">Buyer</a></li>        
+    </ul>
+    <div class="tab-content">
+      <div id="seller">   
+         
+      <form action="/signups" method="post">
+        
+        <p class="header">Name</p>
+        <input type="text" name="user" placeholder="User Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Name';}" required="required">
+        <br>
+        <p class="header">Category</p>
+            <input type="text" name="category" placeholder="Category" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Category';}" required="required">
+      <br>
+        <p class="header">E-mail</p>
+        <input type="text" name="email" placeholder="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail';}" required="required">
+
+          
+        <p class="header">Password</p>
+        <input type="password" name="pass1" placeholder="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="required">
+        
+        <p class="header">Confirm Password</p>
+        <input type="password" name="pass2" placeholder="Confirm Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Confirm Password';}" required="required">
+        
+        <p class="header">Address</p>
+        <input type="text" name="address" placeholder="Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address';}" required="required">
+        
+        <p class="header">State</p>
+        <input type="text" name="state" placeholder="State" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'State';}" required="required">
+        
+        <p class="header">Contact</p>
+        <input type="tel" name="contact" placeholder="Contact" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Contact';}" required="required" 
+        style="border-top: none; border-bottom-color:#a0da4f;border-left: none;border-right: none;
+        padding: 10px;
+        width: 100%;
+        color: #212121;
+        text-align: left;
+        outline: none;
+        letter-spacing: 1px;
+        font-size: 16px;
+        margin-top: 1em;
+        margin-bottom: 2em;
+        font-weight: 600;
+        font-family: 'Poiret One', cursive;
+        background: none;"> 
+        
+        <p class="header">Date Of Birth</p>
+        <input type="date" name="dob" placeholder="DOB" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'DOB';}" required="required" style="border-top: none; border-bottom-color:#a0da4f;border-left: none;border-right: none;padding: 10px;
+        width: 100%;color: #212121;
+        text-align: left;
+        outline: none;
+        letter-spacing: 1px;
+        font-size: 16px;
+        margin-top: 1em;
+        margin-bottom: 2em;
+        font-weight: 600;
+        font-family: 'Poiret One', cursive;
+        background: none;">
+        
+        
+        <input type="checkbox" id="brand" value="">
+        <label for="brand"><span></span> Remember me?</label>
+        
+        <input type="submit" class="sign-in" value="Sign Up">
+      </form>
+    </div>
+    <div id="buyer">   
+
+      <form action="/signupb" method="post">
+        
+        <p class="header">Name</p>
+        <input type="text" name="user" placeholder="Your Full Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Full Name';}" required="required">
+        
+        <p class="header">Email Address</p>
+        <input type="email" name="email" placeholder="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="required">
+        
+        <p class="header">Password</p>
+        <input type="password" name="password" placeholder="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="required">
+        
+        <p class="header">Confirm Password</p>
+        <input type="password" name="cpassword" placeholder="Confirm Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Confirm Password';}" required="required">
+        
+        <p class="header">Address</p>
+        <input type="text" name="address" placeholder="Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address';}" required="required">
+        
+        <p class="header">State</p>
+        <input type="text" name="state" placeholder="State" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'State';}" required="required">
+        
+        <p class="header">Contact</p>
+        <input type="tel" name="Contact" placeholder="Contact" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Contact';}" required="required" style="border-top: none; border-bottom-color:#a0da4f;border-left: none;border-right: none;
+        padding: 10px;
+        width: 100%;
+        color: #212121;
+        text-align: left;
+        outline: none;
+        letter-spacing: 1px;
+        font-size: 16px;
+        margin-top: 1em;
+        margin-bottom: 2em;
+        font-weight: 600;
+        font-family: 'Poiret One', cursive;
+        background: none;"> 
+        
+        <p class="header">Date Of Birth</p>
+        <input type="date" name="dob" placeholder="DOB" onfocus="this.value = '';" 
+        onblur="if (this.value == '') {this.value = 'DOB';}" required="required"
+        style="border-top: none; border-bottom-color:#a0da4f;border-left: none;border-right:
+         none;padding: 10px;
+        width: 100%;color: #212121;
+        text-align: left;
+        outline: none;
+        letter-spacing: 1px;
+        font-size: 16px;
+        margin-top: 1em;
+        margin-bottom: 2em;
+        font-weight: 600;
+        font-family: 'Poiret One', cursive;
+        background: none;">
+        
+        <!-- Modified section please associate correct schemae.
+          
+          
+          <p class="header">Gender</p>
+        <span> <option>Male</option>
+        <input type="checkbox" name="male" placeholder="male" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'male';}" required="required" style="border-top: none; border-bottom-color:#a0da4f;border-left: none;border-right: none;padding: 10px;
+        width: 100%;color: #212121;
+        text-align: left;
+        outline: none;
+        letter-spacing: 1px;
+        font-size: 16px;
+        margin-top: 1em;
+        margin-bottom: 2em;
+        font-weight: 600;
+        font-family: 'Poiret One', cursive;
+        background: none;"></span>
+        <span><option>Female</option>
+        <input type="checkbox" name="female" placeholder="female" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'female';}" required="required" style="border-top: none; border-bottom-color:#a0da4f;border-left: none;border-right: none;padding: 10px;
+        width: 100%;color: #212121;
+        text-align: left;
+        outline: none;
+        letter-spacing: 1px;
+        font-size: 16px;
+        margin-top: 1em;
+        margin-bottom: 2em;
+        font-weight: 600;
+        font-family: 'Poiret One', cursive;
+        background: none;"></span>       -->
+        
+        <input type="submit" class="register" value="Sign up">
+      </form>
+    </div> 
+    </div><!-- tab-content -->
+</div> <!-- /form -->  
+
+<footer>
+    <div class="row">
+      <div class="col-sm-4">
+      <h4>HOME</h4>
+      <h5><a href="#">Login</a></h5>
+      <h5><a href="/signup">Register</a></h5>
+      <h5><a href="/sellers">Subscribe</a></h5>
+      </div>
+  
+      <div class="col-sm-4">
+      <h4>NEWS</h4>
+      <h5><a href="#">News Updates</a></h5>
+      <h5><a href="#">Media Coverage</a></h5>
+      
+      <h5><a href="#">Reflections</a></h5>
+      <h5><a href="#">Newsletter</a></h5>
+  
+      </div>
+      
+      <div class="col-sm-4">
+        <h4>NM LIBRARY</h4>
+        <h5><a href="/buyers">Buyers</a></h5>
+        <h5><a href="#">Sellers</a></h5>
+        
+        <h5><a href="/gallery">Gallery</a></h5>
+        <h5><a href="#">E-Greetings</a></h5>
+  
+      </div>
+    </div>
+    <div class="row" style="margin-left: 10px;">
+      <h4>Connect With Us : </h4>
+      
+      <a href="https://www.facebook.com/"><span style="height:150px;width: 50px;border-top-left-radius: 2px;
+      border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-facebook-square"></i></span></a>
+      <a href="https://www.twitter.com/"><span style="height:150px;width: 50px;border-top-left-radius: 2px;
+      border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-twitter"></i></span></a>
+      <a href="https://www.in.pinterest.com/"><span style="height:150px;width: 50px;border-top-left-radius: 2px;
+      border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-pinterest"></i></span></a>
+      <a href="https://www.plus.google.com/"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+      border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-google-plus"></i></span></a>
+      <a href="https://www.youtube.com/"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+      border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-youtube"></i></span></a>
+      <a href="https://in.linkedin.com/"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+      border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-linkedin-in"></i></span></a>
+      <a href="https://www.instagram.com/simigitika"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+      border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-instagram"></i></span></a>
+      
+  <style type="text/css">iframe.goog-te-banner-frame{ display: none !important;}</style>
+  <style type="text/css">body {position: static !important; top:0px !important;}</style>
+  <style type="text/css">.goog-te-gadget-icon{
+  background:none !important;
+  }</style>
+  <style>
+  .goog-tooltip {
+  display: none !important;
+  }
+  .goog-tooltip:hover {
+  display: none !important;
+  }
+  .goog-text-highlight {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  }
+  </style>
+  <div class="col-sm-6 col-md-6 col-lg-6" style="float:right">
+  <div id="google_translate_element" ></div><script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  </script>
+  </div>
+  
+    </div>
+  </footer>
+</div>
+
+<!-- js files -->
+<script>
+$(".toogleSignup").on("click",function(){
+     $("#seller, #buyer").hide();
+     var id = $(this).attr("href");
+     $(id).show();
+    $('.tab').removeClass("active");
+  $(".tab[tabOf="+id+"]").addClass("active"); 
+});
+$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+  
+  var $this = $(this),
+      label = $this.prev('label');
+
+	  if (e.type === 'keyup') {
+			if ($this.val() === '') {
+          label.removeClass('active highlight');
+        } else {
+          label.addClass('active highlight');
+        }
+    } else if (e.type === 'blur') {
+    	if( $this.val() === '' ) {
+    		label.removeClass('active highlight'); 
+			} else {
+		    label.removeClass('highlight');   
+			}   
+    } else if (e.type === 'focus') {
+      
+      if( $this.val() === '' ) {
+    		label.removeClass('highlight'); 
+			} 
+      else if( $this.val() !== '' ) {
+		    label.addClass('highlight');
+			}
+    }
+
+});
+
+$('.tab a,.links a').on('click', function (e) {
+  
+  e.preventDefault();
+  
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+  
+  target = $(this).attr('href');
+
+  $('.tab-content > div').not(target).hide();
+  
+  $(target).fadeIn(600);
+  
+});
+</script>
+   <script type="text/javascripts" src="/javascripts/bootstrap.js"></script>
+   <script type="text/javascripts" src="/javascripts/bootstrap.min.js"></script>
+   <script type="text/javascripts" src="/javascripts/button.js"></script>
+   <script type="text/javascripts" src="/javascripts/carousel.js"></script>
+   <script type="text/javascripts" src="/javascripts/dropdown.js"></script>
+   <script type="text/javascripts" src="/javascripts/collapse.js"></script>
+   <script type="text/javascripts" src="/javascripts/jquery.js"></script>
+   <script type="text/javascripts" src="/javascripts/jquery.min.js"></script>
+   <script type="text/javascripts" src="/javascripts/tab.js"></script>
+   <script type="text/javascripts" src="/javascripts/popover.js"></script>
+</body>
+</html>

@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <style>
+   /*Nav bar*/
+   body{
+		font-family: 'Varela Round', sans-serif;
+	}
+	.form-control {
+		box-shadow: none;		
+		font-weight: normal;
+		font-size: 13px;
+	}
+	.form-control:focus {
+		border-color: #33cabb;
+		box-shadow: 0 0 8px rgba(0,0,0,0.1);
+	}
+	.navbar-header.col {
+		padding: 0 !important;
+	}	
+	.navbar {
+		background: #fff;
+		padding-left: 16px;
+		padding-right: 16px;
+		border-bottom: 1px solid #dfe3e8;
+		border-radius: 0;
+	}
+	.nav-link img {
+		border-radius: 50%;
+		width: 36px;
+		height: 36px;
+		margin: -8px 0;
+		float: left;
+		margin-right: 10px;
+	}
+	.navbar .navbar-brand, .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
+		padding-left: 0;
+		font-size: 20px;
+		padding-right: 50px;
+	}
+	.navbar .navbar-brand b {
+		font-weight: bold;
+		color: #33cabb;		
+	}
+	.navbar .form-inline {
+        display: inline-block;
+    }
+	.navbar .nav li {
+		position: relative;
+	}
+	.navbar .nav li a {
+		color: #888;
+	}
+	.search-box {
+        position: relative;
+    }	
+    .search-box input {
+        padding-right: 35px;
+		border-color: #dfe3e8;
+        border-radius: 4px !important;
+		box-shadow: none
+    }
+	.search-box .input-group-addon {
+        min-width: 35px;
+        border: none;
+        background: transparent;
+        position: absolute;
+        right: 0;
+        z-index: 9;
+        padding: 7px;
+		height: 100%;
+    }
+    .search-box i {
+        color: #a0a5b1;
+		font-size: 19px;
+    }
+	.navbar .nav .btn-primary, .navbar .nav .btn-primary:active {
+		color: #fff;
+		background: #33cabb;
+		padding-top: 8px;
+		padding-bottom: 6px;
+		vertical-align: middle;
+		border: none;
+	}	
+	.navbar .nav .btn-primary:hover, .navbar .nav .btn-primary:focus {		
+		color: #fff;
+		outline: none;
+		background: #31bfb1;
+	}
+	.navbar .navbar-right li:first-child a {
+		padding-right: 30px;
+	}
+	.navbar .nav-item i {
+		font-size: 18px;
+	}
+	.navbar .dropdown-item i {
+		font-size: 16px;
+		min-width: 22px;
+	}
+	.navbar ul.nav li.active a, .navbar ul.nav li.open > a {
+		background: transparent !important;
+	}	
+	.navbar .nav .get-started-btn {
+		min-width: 120px;
+		margin-top: 8px;
+		margin-bottom: 8px;
+	}
+	.navbar ul.nav li.open > a.get-started-btn {
+		color: #fff;
+		background: #31bfb1 !important;
+	}
+	.navbar .dropdown-menu {
+		border-radius: 1px;
+		border-color: #e5e5e5;
+		box-shadow: 0 2px 8px rgba(0,0,0,.05);
+	}
+	.navbar .nav .dropdown-menu li {
+		color: #999;
+		font-weight: normal;
+	}
+	.navbar .nav .dropdown-menu li a, .navbar .nav .dropdown-menu li a:hover, .navbar .nav .dropdown-menu li a:focus {
+		padding: 8px 20px;
+		line-height: normal;
+	}
+	.navbar .navbar-form {
+		border: none;
+	}
+	.navbar .dropdown-menu.form-wrapper {
+		width: 280px;
+		padding: 20px;
+		left: auto;
+		right: 0;
+        font-size: 14px;
+	}
+	.navbar .dropdown-menu.form-wrapper a {		
+		color: #33cabb;
+		padding: 0 !important;
+	}
+	.navbar .dropdown-menu.form-wrapper a:hover{
+		text-decoration: underline;
+	}
+	.navbar .form-wrapper .hint-text {
+		text-align: center;
+		margin-bottom: 15px;
+		font-size: 13px;
+	}
+	.navbar .form-wrapper .social-btn .btn, .navbar .form-wrapper .social-btn .btn:hover {
+		color: #fff;
+        margin: 0;
+		padding: 0 !important;
+		font-size: 13px;
+		border: none;
+		transition: all 0.4s;
+		text-align: center;
+		line-height: 34px;
+		width: 47%;
+		text-decoration: none;
+    }	
+	.navbar .social-btn .btn-primary {
+		background: #507cc0;
+	}
+	.navbar .social-btn .btn-primary:hover {
+		background: #4676bd;
+	}
+	.navbar .social-btn .btn-info {
+		background: #64ccf1;
+	}
+	.navbar .social-btn .btn-info:hover {
+		background: #4ec7ef;
+	}
+	.navbar .social-btn .btn i {
+		margin-right: 5px;
+		font-size: 16px;
+		position: relative;
+		top: 2px;
+	}
+	.navbar .form-wrapper .form-footer {
+		text-align: center;
+		padding-top: 10px;
+		font-size: 13px;
+	}
+	.navbar .form-wrapper .form-footer a:hover{
+		text-decoration: underline;
+	}
+	.navbar .form-wrapper .checkbox-inline input {
+		margin-top: 3px;
+	}
+	.or-seperator {
+        margin-top: 32px;
+		text-align: center;
+		border-top: 1px solid #e0e0e0;
+    }
+    .or-seperator b {
+		color: #666;
+        padding: 0 8px;
+		width: 30px;
+		height: 30px;
+		font-size: 13px;
+		text-align: center;
+		line-height: 26px;
+		background: #fff;
+		display: inline-block;
+		border: 1px solid #e0e0e0;
+		border-radius: 50%;
+		position: relative;
+		top: -15px;
+		z-index: 1;
+    }
+    .navbar .checkbox-inline {
+		font-size: 13px;
+	}
+	.navbar .navbar-right .dropdown-toggle::after {
+		display: none;
+	}
+	@media (min-width: 1200px){
+		.form-inline .input-group {
+			width: 300px;
+			margin-left: 30px;
+		}
+	}
+	@media (max-width: 768px){
+		.navbar .dropdown-menu.form-wrapper {
+			max-width: 100%;
+			padding: 10px 15px;
+			background: transparent;
+			border: none;
+		}
+		.navbar .form-inline {
+			display: block;
+		}
+		.navbar .input-group {
+			max-width: 100%;
+		}
+		.navbar .nav .btn-primary, .navbar .nav .btn-primary:active {
+			display: block;
+			min-width: 48px;
+			min-height: 48px;
+		}
+	}
+
+ .col-xs-2 a 
+ {
+ color: #071029;
+ font-size: 15px;
+ text-align: center;
+ display: inline-block;
+ }
+ .col-xs-2 img
+ {
+ position: relative;
+ padding: 10px;
+ box-sizing: border-box;
+ }
+ .col-xs-2 a:hover
+ {
+ color: #091C4F;
+ text-decoration: none;
+ font-weight: bold;
+ }
+ .header {
+ padding: 10px 16px;
+ background: #121E3D;
+ color: #f1f1f1;
+ }
+ 
+ 
+ #containermaterial{
+ width: 100%;
+ height: 800px;
+ border:0px solid red;
+ background-color: white;
+ }
+ 
+ #material{
+ width: 220px;
+ height: 320px;
+ border: 1px solid rgb(191, 190, 192);
+ float: left;
+ position: relative;
+ padding: 20px;
+ box-sizing: border-box;
+ margin: 30px;
+ 
+ }
+ #material img{
+ position: relative;
+ -webkit-transition: width 0.4s, height 0.4s;
+ transition: width 0.4s, height 0.4s;}
+ 
+ #material img:hover {
+ width: 155px;
+ height: 105px;
+ }
+ #material:hover
+ {
+ border: 2px solid gray;
+ }
+ #material figcaption{
+ text-align: center;
+ text-decoration: none;
+ font-size: 20px;
+ padding: 5px;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
+ }
+ #material td{
+ text-decoration: none;
+ font-size: 15px;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ color: rgb(36, 35, 37);
+ 
+ }
+ #material button {
+ background-color: snow; /* Green */
+ border: 1px solid black;
+ border-radius: 10px;
+ width:100%;
+ color: black;
+ padding: 10px;
+ text-align: center;
+ text-decoration: none;
+ font-size: 16px;
+ margin: 4px 2px;
+ -webkit-transition-duration: 0.4s; /* Safari */
+ transition-duration: 0.4s;
+ cursor: pointer;
+ overflow: hidden;
+ }
+ #material button:hover{
+ background-color: rgb(10, 10, 59); 
+ color: white; 
+ border:0px solid #4CAF50;
+ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+ 
+ #sell{
+ width: 100%;
+ height: 100px;
+ background-color: white;
+ color: white;
+ box-sizing: border-box;
+ padding: 50px;
+ }
+ .sellh {
+ width: 100%;
+ height: auto;
+ padding: 10px 16px;
+ background: #121E3D;
+ color: #f1f1f1;
+ }
+ #seller{
+   width: 100%;
+   height: 800px;
+   background-color: white;
+ color: white;
+ box-sizing: border-box;
+ padding: 50px; 
+ float:left;
+  }
+ #sellerid{
+ width:  300px;
+ height: 700px;
+ border: 1px solid rgb(191, 190, 192);
+ background-color: white;
+ color: black;
+ padding:20px;
+ margin: 20px;
+ float: left;
+ }
+ #sellerid img{
+ width: 250px;
+ height: 300px;
+ border: 1px solid rgb(191, 190, 192);
+ background-color: white;
+ color: black;
+ padding:10px;
+ margin: 10px;
+ }
+ #sellerid1 {
+ width:100%;
+ height: 650px;
+ border: 1px solid red;
+ background-color: white;
+ padding:20px;
+ margin: 20px;
+ float: left;
+ }
+ #sellerid1 img {
+ width:100%;
+ height: 250px;
+ border: 1px solid red;
+ background-color: white;
+ padding:20px;
+ margin: 20px;
+ float: left;
+ }
+ #sellerid3{
+ width:100%;
+ height: 650px;
+ border: 1px solid red;
+ background-color: white;
+ padding:20px;
+ margin: 20px;
+ float: left;
+ }
+ #sellerid3 img{
+ width:100%;
+ height: 250px;
+ border: 1px solid red;
+ background-color: white;
+ padding:20px;
+ margin: 20px;
+ float: left;
+ }
+ #sellerid4{
+ width:100%;
+ height: 650px;
+ border: 1px solid red;
+ background-color: white;
+ padding:20px;
+ margin: 20px;
+ float: left;
+ }
+ #sellerid4 img{
+ width:100%;
+ height: 250px;
+ border: 1px solid red;
+ background-color: white;
+ padding:20px;
+ margin: 20px;
+ float: left;
+ }
+
+ #sellerid figcaption{
+ text-align: center;
+ text-decoration: none;
+ font-size: 20px;
+ padding: 5px;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+ #sellerid img{
+ position: relative;
+ -webkit-transition: width 0.4s, height 0.4s;
+ transition: width 0.4s, height 0.4s;}
+ 
+ /* #sellerid img:hover {
+ width: 100%;
+ height: 250px;
+ } */
+ #sellerid:hover
+ {
+ border: 2px solid black;
+ }
+
+ #sellerid td{
+ text-decoration: none;
+ font-size: 15px;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ color: rgb(36, 35, 37);
+ position: relative;
+ margin-left: 30px;
+ 
+ }
+ #sellerid button {
+ background-color: snow; /* Green */
+ border: 1px solid black;
+ border-radius: 10px;
+ width:100%;
+ color: black;
+ padding: 10px;
+ text-align: center;
+ text-decoration: none;
+ font-size: 16px;
+ margin: 4px 2px;
+ -webkit-transition-duration: 0.4s; /* Safari */
+ transition-duration: 0.4s;
+ cursor: pointer;
+ overflow: hidden;
+ }
+ #sellerid button:hover{
+ background-color: rgb(10, 10, 59); 
+ color: white; 
+ border:0px solid #4CAF50;
+ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+
+ /*-----------------------------------------------------*/
+ #sellerid1 figcaption{
+ text-align: center;
+ text-decoration: none;
+ font-size: 20px;
+ padding: 5px;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+ #sellerid1 img{
+ position: relative;
+ -webkit-transition: width 0.4s, height 0.4s;
+ transition: width 0.4s, height 0.4s;}
+ 
+ /* #sellerid1 img:hover {
+ width: 100%;
+ height: 250px;
+ } */
+ #sellerid1 :hover
+ {
+ border: 2px solid gray;
+ }
+
+ #sellerid1 td{
+ text-decoration: none;
+ font-size: 15px;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ color: rgb(36, 35, 37);
+ position: relative;
+ margin-left: 30px;
+ 
+ }
+ #sellerid1 button {
+ background-color: snow; /* Green */
+ border: 1px solid black;
+ border-radius: 10px;
+ width:100%;
+ color: black;
+ padding: 10px;
+ text-align: center;
+ text-decoration: none;
+ font-size: 16px;
+ margin: 4px 2px;
+ -webkit-transition-duration: 0.4s; /* Safari */
+ transition-duration: 0.4s;
+ cursor: pointer;
+ overflow: hidden;
+ }
+ #sellerid1 button:hover{
+ background-color: rgb(10, 10, 59); 
+ color: white; 
+ border:0px solid #4CAF50;
+ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+ /*-----------------------*/
+ #sellerid3 figcaption{
+ text-align: center;
+ text-decoration: none;
+ font-size: 20px;
+ padding: 5px;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+ #sellerid3 img{
+ position: relative;
+ -webkit-transition: width 0.4s, height 0.4s;
+ transition: width 0.4s, height 0.4s;}
+ 
+ /* #sellerid3 img:hover {
+ width: 100%;
+ height: 250px;
+ } */
+ #sellerid3 :hover
+ {
+ border: 2px solid gray;
+ }
+
+ #sellerid3 td{
+ text-decoration: none;
+ font-size: 15px;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ color: rgb(36, 35, 37);
+ position: relative;
+ margin-left: 30px;
+ 
+ }
+ #sellerid3 button {
+ background-color: snow; /* Green */
+ border: 1px solid black;
+ border-radius: 10px;
+ width:100%;
+ color: black;
+ padding: 10px;
+ text-align: center;
+ text-decoration: none;
+ font-size: 16px;
+ margin: 4px 2px;
+ -webkit-transition-duration: 0.4s; /* Safari */
+ transition-duration: 0.4s;
+ cursor: pointer;
+ overflow: hidden;
+ }
+ #sellerid3 button:hover{
+ background-color: rgb(10, 10, 59); 
+ color: white; 
+ border:0px solid #4CAF50;
+ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+
+ /*------------------------------------------------------------------------*/
+
+ #sellerid4 figcaption{
+ text-align: center;
+ text-decoration: none;
+ font-size: 20px;
+ padding: 5px;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+ #sellerid4 img{
+ position: relative;
+ -webkit-transition: width 0.4s, height 0.4s;
+ transition: width 0.4s, height 0.4s;}
+ 
+ /* #sellerid4 img:hover {
+ width: 100%;
+ height: 250px;
+ } */
+ #sellerid4 :hover
+ {
+ border: 2px solid gray;
+ }
+
+ #sellerid4 td{
+ text-decoration: none;
+ font-size: 15px;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ color: rgb(36, 35, 37);
+ position: relative;
+ margin-left: 30px;
+ 
+ }
+ #sellerid4 button {
+ background-color: snow; /* Green */
+ border: 1px solid black;
+ border-radius: 10px;
+ width:100%;
+ color: black;
+ padding: 10px;
+ text-align: center;
+ text-decoration: none;
+ font-size: 16px;
+ margin: 4px 2px;
+ -webkit-transition-duration: 0.4s; /* Safari */
+ transition-duration: 0.4s;
+ cursor: pointer;
+ overflow: hidden;
+ }
+ #sellerid4 button:hover{
+ background-color: rgb(10, 10, 59); 
+ color: white; 
+ border:0px solid #4CAF50;
+ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+ </style>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1"> 
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="keywords" content="stylish Sign in and Sign up Form A Flat Responsive widget, Login form web template,Flat Pricing tables,Flat Drop downs Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+ <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); 
+ function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!--online_fonts-->
+ <link href="//fonts.googleapis.com/css?family=Sansita:400,400i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+ <link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+ 
+ <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script type="text/javascripts" src="/javascripts/button.js"></script>
+ <script type="text/javascripts" src="/javascripts/carousel.js"></script>
+ <script type="text/javascripts" src="/javascripts/dropdown.js"></script>
+ <script type="text/javascripts" src="/javascripts/collapse.js"></script>
+ <script type="text/javascripts" src="/javascripts/jquery.js"></script>
+ <script type="text/javascripts" src="/javascripts/jquery.min.js"></script>
+ <script type="text/javascripts" src="/javascripts/tab.js"></script>
+ <script type="text/javascripts" src="/javascripts/popover.js"></script>
+ 
+ <script>
+ $(document).ready(function(){
+ $(".header").mouseenter(function(){
+ $("p").slideDown("slow");
+ });
+ });
+ </script>
+ <script>$(document).ready(function(){
+ $(".header").mouseleave(function(){
+ $("p").slideUp("slow");
+ }); });</script>
+ 
+ ;
+ </script>
+ <script>
+ $(document).ready(function(){
+ $(".footerh").click(function(){
+ $("#sellerid").slideToggle("slow");
+ });
+ });
+ </script>
+ <script>
+ $(document).ready(function(){
+ $(".footerh").click(function(){
+ $("#sellerid2").slideToggle("slow");
+ });
+ });
+ </script>
+ <script>
+ $(document).ready(function(){
+ $(".footerh").click(function(){
+ $("#sellerid3").slideToggle("slow");
+ });
+ });
+ </script>
+ <script>
+ $(document).ready(function(){
+ $(".footerh").click(function(){
+ $("#sellerid4").slideToggle("slow");
+ });
+ });
+ </script>
+ 
+ <script>
+ var carousels = $('.carousel');
+ carousels.each(function() {
+ 
+ var $obj = $(this);
+ 
+ var $inner = $obj.find('.carousel-inner');
+ var id = 'uuid' + new Date().getTime();
+ 
+ $obj.addClass(id);
+ 
+ if ($obj.data('shift') === 1) {
+ var items = $obj.find('.item > [class*="col-"]'),
+ visibleCnt = $obj.find('.item:first [class*="col-"]').length,
+ wrapper = "";
+ var rule_base = '.carousel.' + id + ' .carousel-inner > .item',
+ styles = $('<style></style>'),
+ rules = [];
+ rules[0] = rule_base + '.next {left: ' + (100 / visibleCnt) + '%; transform: none;}';
+ rules[1] = rule_base + '.active {left: 0;}';
+ rules[2] = rule_base + '.active.left {left: -' + (100 / visibleCnt) + '%; transform: none;}';
+ rules[3] = rule_base + '.next.left {left: 0;}';
+ rules[4] = rule_base + '.active.right {left: ' + (100 / visibleCnt) + '%; transform: none;}';
+ rules[5] = rule_base + '.prev.right {left: 0;}';
+ rules[6] = rule_base + '.prev {left: -' + (100 / visibleCnt) + '%; transform: none;}';
+ for (var i = 0; i < rules.length; i++) {
+ styles.append(rules[i]);
+ }
+ 
+ $obj.prepend(styles);
+ // rebuild items
+ for (var i = 0; i < $(items).length; i++) {
+ 
+ var $item = $(items[i]);
+ 
+ var parent = $item.parent();
+ if (parent.hasClass('item')) {
+ if (!wrapper.length) {
+ wrapper = parent.clone().removeClass('active').html('');
+ }
+ $item.unwrap();
+ }
+ var itemGroup = [$item];
+ for (var x = 1; x < visibleCnt; x++) {
+ var a = i + x;
+ var next = $(items[a]);
+ if (!next.length) {
+ next = $(items[(a - $(items).length)]);
+ }
+ itemGroup[x] = next.clone();
+ }
+ var newSet = wrapper.clone().html(itemGroup);
+ if (i == 0) {
+ newSet.addClass('active');
+ }
+ newSet.appendTo($inner);
+ }
+ }
+ });
+ </script>
+</head>
+
+<body>
+<div class="container-fluid">
+  <header>
+    	<nav class="navbar navbar-default navbar-expand-lg navbar-light">
+          <div class="row">
+    
+      <div class="navbar-header d-flex col col-sm-3">
+        <a class="navbar-brand" href="/">
+      <img src="/images/third.jpg" style="border-bottom-left-radius: 20px;
+      border-top-right-radius: 20px;border-bottom-right-radius: 20px;
+      border-top-left-radius: 20px;height: 180px;width: 80px; padding-top: 40px;">
+        </div>
+        <div class="navbar-header d-flex col col-sm-9">
+            <b style="position: relative; margin-left: 100px;margin-top:-15px;">
+              Deendayal Antyodaya Yojana-
+                National Urban Livelihoods Mission (DAY-NULM) <br><br>
+            <b style="position: relative; margin-left: 100px;font-size: 25px;
+            color:#850C4D;">Ministry of Housing and Urban Affairs<br><br>
+            <b style="position: relative; margin-left: 100px;">Government of India
+                        </b></a>  	
+        </div>
+      
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle 
+        navbar-toggler ml-auto">
+          <span class="navbar-toggler-icon"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <!-- Collection of nav links, forms, and other content for toggling -->
+      <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+        <br> <ul class="nav navbar-nav" style="position: relative;">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="/about" class="nav-link">About DAY</a></li>			
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">News
+              <b class="caret"></b></a>
+            <ul class="dropdown-menu">					
+              <li><a href="#" class="dropdown-item">News Updates</a></li>
+              <li><a href="#" class="dropdown-item">Media Coverage</a></li>
+              <li><a href="#" class="dropdown-item">Reflections</a></li>
+              <li><a href="#" class="dropdown-item">Newsletter</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Governance<b class="caret"></b></a>
+            <ul class="dropdown-menu">					
+              <li><a href="#" class="dropdown-item">Governance Paradigm</a></li>
+              <li><a href="#" class="dropdown-item">Global Recognition</a></li>
+              <li><a href="#" class="dropdown-item">Infographics</a></li>
+              <li><a href="#" class="dropdown-item">Insights</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item active"><a href="/gallery" class="nav-link">Gallery</a></li>
+          </ul>
+        <form class="navbar-form form-inline">
+          <div class="input-group search-box">								
+            <input type="text" id="search" class="form-control"
+             placeholder="Search here...">
+            <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+          </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right ml-auto">			
+          <li class="nav-item" style="clear: right;">
+            <a  href="/">Logout</a>
+            <!-- <ul class="dropdown-menu form-wrapper">					
+              <li>
+                <form action="/sellers/index" method="post">
+                  <p class="hint-text">Sign in with your social media account</p>
+                  <div class="form-group social-btn clearfix">
+                    <a href="#" class="btn btn-primary pull-left"><i class="fa fa-facebook"></i> Facebook</a>
+                    <a href="#" class="btn btn-info pull-right"><i class="fa fa-twitter"></i> Twitter</a>
+                  </div>
+                  <div class="or-seperator"><b>or</b></div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Username" required="required">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" required="required">
+                  </div>
+                  <input type="submit" class="btn btn-primary btn-block" value="Login">
+                  <div class="form-footer">
+                    <a href="#">Forgot Your password?</a>
+                  </div>
+                </form>
+              </li>
+            </ul> -->
+          </li> 
+          <!-- <li class="nav-item"style="clear: right;">
+            <a href="/signup" class="btn btn-primary ">Sign up</a>
+              </li> -->
+    </nav>
+  </header>
+<section> <!--carousel-->
+ <div id="example" class="carousel slide" data-ride="carousel" style="width: 98%;background-color:slategrey;">
+ 
+ <div class="carousel-inner" >
+ 
+ <ul class="row item active" style="list-style-type: none;"> 
+ 
+ <li class="col-xs-2">
+ 
+ <a target="_blank" href="/vege" >
+ <figure>
+ <img src="/images/vege.jpg" alt="Trulli" style="width: 200px;height:140px;" class="img-responsive">
+ <figcaption >Vegetables</figcaption>
+ </figure>
+ </a>
+ 
+ </li>
+ 
+ <li class="col-xs-2">
+ 
+ <a target="_blank" href="/jewellery" >
+ <figure>
+ <img src="/images/jwell.jpg" alt="Trulli" style="width: 170px;height:140px;" class="img-responsive">
+ <figcaption>Jewellery</figcaption>
+ </figure>
+ </a>
+ 
+ </li>
+ 
+ <li class="col-xs-2">
+ 
+ <a target="_blank" href="/pulses">
+ <figure>
+ <img src="/images/pul.jpg" alt="Trulli" style="width: 200px;height:140px;" class="img-responsive">
+ <figcaption>Pulses</figcaption>
+ </figure>
+ </a>
+ 
+ </li>
+ <li class="col-xs-2">
+ 
+ <a target="_blank" href="/fruits">
+ <figure>
+ <img src="/images/fru.jpg" alt="Trulli" style="width: 200px;height:140px;" class="img-responsive">
+ <figcaption>Fruits</figcaption>
+ </figure>
+ </a>
+ 
+ </li>
+ <li class="col-xs-2">
+ 
+ <a target="_blank" href="/raw">
+ <figure>
+ <img src="/images/whole.jpg" alt="Trulli" style="width: 200px;height:140px;" class="img-responsive">
+ <figcaption>Whole</figcaption>
+ </figure>
+ </a>
+ 
+ </li>
+ <li class="col-xs-2">
+ 
+ <a target="_blank" href="/spices">
+ <figure>
+ <img src="/images/spice.jpg" alt="Trulli" style="width: 200px;height:140px;" class="img-responsive">
+ <figcaption>Spice</figcaption>
+ </figure>
+ </a>
+ 
+ </li>
+ </ul>
+ 
+ <ul class="row item" style="list-style-type: none;">
+ 
+ <li class="col-xs-2">
+ 
+ <a target="_blank" href="/bag">
+ <figure>
+ <img src="/images/bag.jpg" alt="Trulli" style="width: 120px;height:140px;" class="img-responsive">
+ <figcaption>Bag</figcaption>
+ </figure>
+ </a>
+ 
+ </li>
+ 
+ <li class="col-xs-2">
+ 
+ <a target="_blank" href="/toy">
+ <figure>
+ <img src="/images/toy.jpg" alt="Trulli" style="width: 200px;height:140px;" class="img-responsive">
+ <figcaption>Toy</figcaption>
+ </figure>
+ </a>
+ 
+ </li>
+ 
+ <li class="col-xs-2">
+ 
+ <a target="_blank" href="/pf">
+ <figure>
+ <img src="/images/pf.jpg" alt="Trulli" style="width: 200px;height:140px;" class="img-responsive">
+ <figcaption>PF</figcaption>
+ </figure>
+ </a>
+ 
+ </li>
+ <li class="col-xs-2">
+ 
+ <a target="_blank" href="/dairy">
+ <figure>
+ <img src="/images/dairy.jpg" alt="Trulli" style="width: 200px;height:140px;" class="img-responsive">
+ <figcaption>Dairy</figcaption>
+ </figure>
+ </a>
+ 
+ </li>
+ </ul>
+ 
+ </div>
+ 
+ <a class="carousel-control left" href="#example" data-slide="prev"></a>
+ 
+ <a class="carousel-control right" href="#example" data-slide="next"></a>
+ 
+ 
+ 
+ 
+ 
+ </div>
+ 
+ <br>
+ <br>
+ <div class="header">
+ <h2 >Top selling products</h2>
+ 
+ </div>
+ <p style="
+ width: 100%;
+ height: 100px;
+ background-color: #071029;
+ color: white;
+ font-size:20px;
+ display: none;
+ padding:20px; text-align: center;"
+ > Different types of products, that we are sure you don't wanna miss.
+ </p>
+ 
+ <!--<div class="sticky">RAW MATERIAL</div>-->
+ 
+
+ <div id="containermaterial">
+ <div id="material">
+ <img src="/images/tea.jpg" height="100px" width="150px" >
+ <figcaption>Tea</figcaption>
+ <br>
+ 
+ <table width="100%" height="auto" border="0px solid red">
+ <tr>
+ <td align="left">
+ 1 kg
+ </td> 
+ <td align="right"> ₹50</td>
+ </tr>
+ <tr>
+ <td align="left">
+ SOLD BY
+ </td> 
+ <td align="right"><a href="/pulkit">Pulkit</a></td>
+ </tr>
+ <tr><td colspan="2" style="position: relative;">
+ <button > ADD TO CART </button>
+ 
+ </td></tr>
+ </table>
+ </div>
+ <div id="material">
+ <img src="/images/handmade.jpg" height="100px" width="150px" >
+ <figcaption>Bags</figcaption>
+ 
+ <br>
+ <table width="100%" height="auto" border="0px solid red">
+ <tr>
+ <td align="left">
+ 1 kg
+ </td> 
+ <td align="right"> ₹50</td>
+ </tr>
+ <tr>
+ <td align="left">
+ SOLD BY
+ </td> 
+ <td align="right"><a href="/dikshita">Dikshita</a></td>
+ </tr>
+ <tr><td colspan="2" style="position: relative;">
+ <button > ADD TO CART </button>
+ 
+ </td></tr>
+ </table>
+ </div>
+ <div id="material">
+ <img src="/images/mango.jpg" height="100px" width="150px" >
+ <figcaption>Mangoes</figcaption>
+ 
+ <br>
+ <table width="100%" height="auto" border="0px solid red">
+ <tr>
+ <td align="left">
+ 1 kg
+ </td> 
+ <td align="right"> ₹50</td>
+ </tr>
+ <tr>
+ <td align="left">
+ SOLD BY
+ </td> 
+ <td align="right"><a href="/vinayak">Vinayak</a></td>
+ </tr>
+ <tr><td colspan="2" style="position: relative;">
+ <button > ADD TO CART </button>
+ 
+ </td></tr>
+ </table>
+ </div>
+ <div id="material">
+ <img src="/images/wool.jpg" height="100px" width="150px" >
+ <figcaption>Wool Threads</figcaption>
+ 
+ <br>
+ <table width="100%" height="auto" border="0px solid red">
+ <tr>
+ <td align="left">
+ 1 kg
+ </td> 
+ <td align="right"> ₹50</td>
+ </tr>
+ <tr>
+ <td align="left">
+ SOLD BY
+ </td> 
+ <td align="right"><a href="/gitika">Gitika</a></td>
+ </tr>
+ <tr><td colspan="2" style="position: relative;">
+ <button > ADD TO CART </button>
+ 
+ </td></tr>
+ </table>
+ </div>
+ <div id="material">
+ <img src="/images/cauli.jpg" height="100px" width="150px" >
+ <figcaption>Cauliflower</figcaption> 
+ <br>
+ 
+ <table width="100%" height="auto" border="0px solid red">
+ <tr>
+ <td align="left">
+ 1 kg
+ </td> 
+ <td align="right"> ₹50</td>
+ </tr>
+ 
+ <tr>
+ <td align="left">
+ SOLD BY
+ </td> 
+ <td align="right"><a href="/vinayak">Vinayak</a></td>
+ </tr>
+ <tr><td colspan="2" style="position: relative;">
+ <button > ADD TO CART </button>
+ 
+ </td></tr>
+ </table>
+ </div>
+ 
+ <div id="material">
+ <img src="/images/whe.jpg" height="100px" width="150px" >
+ <figcaption>Whole Wheat</figcaption>
+ <br>
+ 
+ <table width="100%" height="auto" border="0px solid red">
+ <tr>
+ <td align="left">
+ 1 kg
+ </td> 
+ <td align="right"> ₹50</td>
+ </tr>
+ <tr>
+ <td align="left">
+ SOLD BY
+ </td> 
+ <td align="right"><a href="/pulkit">Pulkit</a></td>
+ </tr>
+ <tr><td colspan="2" style="position: relative;">
+ <button > ADD TO CART </button>
+ 
+ </td></tr>
+ </table>
+ </div>
+ <div id="material">
+ <img src="/images/rajma.jpg" height="100px" width="150px" >
+ <figcaption>Rajma</figcaption>
+ <br>
+ 
+ <table width="100%" height="auto" border="0px solid red">
+ <tr>
+ <td align="left">
+ 1 kg
+ </td> 
+ <td align="right"> ₹50</td>
+ </tr>
+ <tr>
+ <td align="left">
+ SOLD BY
+ </td> 
+ <td align="right"><a href="/gitika">Gitika</a></td>
+ </tr>
+ <tr><td colspan="2" style="position: relative;">
+ <button > ADD TO CART </button>
+ 
+ </td></tr>
+ </table>
+ </div>
+ <div id="material">
+ <img src="/images/jwe.jpg" height="100px" width="150px" >
+ <figcaption>Jwellery</figcaption>
+ <br>
+ 
+ <table width="100%" height="auto" border="0px solid red">
+ <tr>
+ <td align="left">
+ 1 kg
+ </td> 
+ <td align="right"> ₹50</td>
+ </tr>
+ <tr>
+ <td align="left">
+ SOLD BY
+ </td> 
+ <td align="right"><a href="/dikshita">Dikshita</a></td>
+ </tr>
+ <tr><td colspan="2" style="position: relative;">
+ <button > ADD TO CART </button>
+ 
+ </td></tr>
+ </table>
+ </div>
+ <div id="material">
+ <img src="/images/rubber.jpg" height="100px" width="150px" >
+ <figcaption>Rubber</figcaption>
+ <br>
+ 
+ <table width="100%" height="auto" border="0px solid red">
+ <tr>
+ <td align="left">
+ 1 kg
+ </td> 
+ <td align="right"> ₹50</td>
+ </tr>
+ <tr>
+ <td align="left">
+ SOLD BY
+ </td> 
+ <td align="right"><a href="/vinayak">Vinayak</a></td>
+ </tr>
+ <tr><td colspan="2" style="position: relative;">
+ <button > ADD TO CART </button>
+ 
+ </td></tr>
+ </table>
+ </div>
+ <div id="material">
+ <img src="/images/sugarcane.jpg" height="100px" width="150px" >
+ <figcaption>Sugarcane</figcaption>
+ <br>
+ <table width="100%" height="auto" border="0px solid red">
+ <tr>
+ <td align="left">
+ 1 kg
+ </td> 
+ <td align="right"> ₹50</td>
+ </tr>
+ <tr>
+ <td align="left">
+ SOLD BY
+ </td> 
+ <td align="right"><a href="/gitika">Gitika</a></td>
+ </tr>
+ <tr><td colspan="2" style="position: relative;">
+ <button > ADD TO CART </button>
+ 
+ </td></tr>
+ </table>
+ </div>
+ </div>
+ 
+ 
+ <div id="sell">
+ <div class="sellh" >
+ <h2 >Recommended Seller</h2>
+ </div>
+
+ </div>
+
+ <br><br>
+ <div id="seller">
+ <div id="sellerid">
+ <img src="/images/seller0.jpg">
+ <figcaption>Vinayak Chopra</figcaption>
+ <table style="width:200px;height:300px;border: 0px solid red;">
+ <tr>
+ <td>Zone: North Delhi</td>
+ </tr>
+ <tr>
+ <td align="center">Average rating: 4.2/5</td>
+ </tr>
+ <tr><td colspan="2" style="position: relative;">
+ <a href="/vinayak"><button>VIEW PROFILE </button></a>
+ 
+ 
+ </td></tr>
+ </table>
+ </div>
+
+ <div id="sellerid">
+
+ <img src="/images/seller.jpg">
+ <figcaption>Dikshita Jindal</figcaption>
+ <table style="width:200px;height:300px;border: 0px solid red;">
+ <tr>
+ <td>Zone: West Delhi</td>
+ </tr>
+ <tr>
+ <td>Average rating: 4.7/5</td>
+ </tr>
+ <tr><td colspan="2" style="position: relative;">
+ <a href="/dikshita"><button>VIEW PROFILE </button></a>
+ 
+ 
+ </td></tr>
+ </table>
+ </div>
+
+ <div id="sellerid">
+ <img src="/images/seller3.jpg">
+ <figcaption>Pulkit Gupta</figcaption>
+ <table style="width:200px;height:300px;border: 0px solid red;">
+ <tr>
+ <td>Zone: North, North-West Delhi</td>
+ </tr>
+ <tr>
+ <td>Average rating: 3.6/5</td>
+ </tr>
+ <tr><td colspan="2" style="position: relative;">
+ <a href="/pulkit"><button>VIEW PROFILE </button></a>
+ 
+ 
+ </td></tr>
+ </table>
+ </div>
+ 
+ <div id="sellerid">
+
+ <img src="/images/seller2.jpg">
+ <figcaption>Gitika Babbar</figcaption>
+ <table style="width:200px;height:300px;border: 0px solid red;">
+ <tr>
+ <td>Zone: North, North-West Delhi</td>
+ </tr>
+ <tr>
+ <td>Average rating: 4.8/5</td>
+ </tr>
+ <tr><td colspan="2" style="position: relative;">
+ <a href="/gitika"><button>VIEW PROFILE </button></a>
+ 
+ 
+ </td></tr>
+ </table>
+ </div>
+ 
+ 
+ </div>
+ 
+
+</section>
+<footer>
+    <div class="row">
+      <div class="col-sm-4">
+        <h4>HOME</h4>
+        <h5><a href="#">Login</a></h5>
+        <h5><a href="/signup">Register</a></h5>
+        <h5><a href="/sellers">Subscribe</a></h5>
+      </div>
+
+      <div class="col-sm-4">
+        <h4>NEWS</h4>
+        <h5><a href="#">News Updates</a></h5>
+        <h5><a href="#">Media Coverage</a></h5>
+        
+        <h5><a href="#">Reflections</a></h5>
+        <h5><a href="#">Newsletter</a></h5>
+
+      </div>
+      
+      <div class="col-sm-4">
+          <h4>NM LIBRARY</h4>
+          <h5><a href="/buyers">Buyers</a></h5>
+          <h5><a href="#">Sellers</a></h5>
+          
+          <h5><a href="/gallery">Gallery</a></h5>
+          <h5><a href="#">E-Greetings</a></h5>
+
+        </div>
+    </div>
+    <div class="row" style="margin-left: 10px;">
+	  <h4>Connect With Us : </h4>
+	  
+	  <a href="https://www.facebook.com/"><span style="height:150px;width: 50px;border-top-left-radius: 2px;
+		border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-facebook-square"></i></span></a>
+      <a href="https://www.twitter.com/"><span style="height:150px;width: 50px;border-top-left-radius: 2px;
+		border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-twitter"></i></span></a>
+      <a href="https://www.in.pinterest.com/"><span style="height:150px;width: 50px;border-top-left-radius: 2px;
+		border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-pinterest"></i></span></a>
+      <a href="https://www.plus.google.com/"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+		border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-google-plus"></i></span></a>
+      <a href="https://www.youtube.com/"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+		border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-youtube"></i></span></a>
+      <a href="https://in.linkedin.com/"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+		border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-linkedin-in"></i></span></a>
+      <a href="https://www.instagram.com/simigitika"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+		border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-instagram"></i></span></a>
+      
+<style type="text/css">iframe.goog-te-banner-frame{ display: none !important;}</style>
+<style type="text/css">body {position: static !important; top:0px !important;}</style>
+<style type="text/css">.goog-te-gadget-icon{
+background:none !important;
+}</style>
+<style>
+.goog-tooltip {
+display: none !important;
+}
+.goog-tooltip:hover {
+display: none !important;
+}
+.goog-text-highlight {
+background-color: transparent !important;
+border: none !important;
+box-shadow: none !important;
+}
+</style>
+<div class="col-sm-6 col-md-6 col-lg-6" style="float:right">
+<div id="google_translate_element" ></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+</div>
+
+    </div>
+</footer>
+
+ </div>
+</body>
+</html>

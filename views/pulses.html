@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .col-xs-2 a 
+  {
+    color: #071029;
+    font-size: 15px;
+    text-align: center;
+    display: inline-block;
+  }
+  .col-xs-2 img
+  {
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .col-xs-2 a:hover
+  {
+   color: #091C4F;
+   text-decoration: none;
+   font-weight: bold;
+  }
+  .header {
+  padding: 10px 16px;
+  background: #121E3D;
+  color: #f1f1f1;
+}
+#material{
+  width: 220px;
+  height: 320px;
+  border: 1px solid rgb(191, 190, 192);
+  float: left;
+  position: relative;
+  padding: 40px;
+  box-sizing: border-box;
+  margin: 20px;
+
+}
+#material img{
+  position: relative;
+  -webkit-transition: width 0.4s, height 0.4s;
+  transition: width 0.4s, height 0.4s;}
+
+#material img:hover {
+    width: 155px;
+    height: 105px;
+}
+#material:hover
+{
+border: 2px solid gray;
+}
+#material figcaption{
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+#material td{
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(36, 35, 37);
+
+}
+#material button {
+  background-color: snow; /* Green */
+    border: 1px solid black;
+    border-radius: 10px;
+    width:100%;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    overflow: hidden;
+}
+#material button:hover{
+  background-color: rgb(10, 10, 59); 
+    color: white; 
+    border:0px solid #4CAF50;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/stylesheets/style2.css">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="stylish Sign in and Sign up Form A Flat Responsive widget, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); 
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--online_fonts-->
+  <link href="//fonts.googleapis.com/css?family=Sansita:400,400i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  
+<!--<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'-->
+
+<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+ <script src='/javascripts/bootstrap.js'></script>
+ <script src='/javascripts/bootstrap.min.js'></script>
+ <script type="text/javascripts" src="/javascripts/button.js"></script>
+ <script type="text/javascripts" src="/javascripts/carousel.js"></script>
+ <script type="text/javascripts" src="/javascripts/dropdown.js"></script>
+ <script type="text/javascripts" src="/javascripts/collapse.js"></script>
+ <script type="text/javascripts" src="/javascripts/jquery.js"></script>
+ <script type="text/javascripts" src="/javascripts/jquery.min.js"></script>
+ <script type="text/javascripts" src="/javascripts/tab.js"></script>
+ <script type="text/javascripts" src="/javascripts/popover.js"></script>
+
+ <script>
+    $(document).ready(function(){
+        $(".header").mouseenter(function(){
+          $("p").slideDown("slow");
+        });
+    });
+    </script>
+    <script>$(document).ready(function(){
+        $(".header").mouseleave(function(){
+            $("p").slideUp("slow");
+        }); });</script>
+
+ <script>
+  var carousels = $('.carousel');
+  carousels.each(function() {
+  
+    var $obj = $(this);
+
+    var $inner = $obj.find('.carousel-inner');
+    var id = 'uuid' + new Date().getTime();
+  
+    $obj.addClass(id);
+  
+    if ($obj.data('shift') === 1) {
+      var items = $obj.find('.item > [class*="col-"]'),
+          visibleCnt = $obj.find('.item:first [class*="col-"]').length,
+          wrapper = "";
+      var rule_base = '.carousel.' + id + ' .carousel-inner > .item',
+          styles = $('<style></style>'),
+          rules = [];
+          rules[0] = rule_base + '.next {left: ' + (100 / visibleCnt) + '%; transform: none;}';
+          rules[1] = rule_base + '.active {left: 0;}';
+          rules[2] = rule_base + '.active.left {left: -' + (100 / visibleCnt) + '%; transform: none;}';
+          rules[3] = rule_base + '.next.left {left: 0;}';
+          rules[4] = rule_base + '.active.right {left: ' + (100 / visibleCnt) + '%; transform: none;}';
+          rules[5] = rule_base + '.prev.right {left: 0;}';
+          rules[6] = rule_base + '.prev {left: -' + (100 / visibleCnt) + '%; transform: none;}';
+      for (var i = 0; i < rules.length; i++) {
+        styles.append(rules[i]);
+      }
+  
+      $obj.prepend(styles);
+      // rebuild items
+      for (var i = 0; i < $(items).length; i++) {
+  
+        var $item = $(items[i]);
+  
+        var parent = $item.parent();
+        if (parent.hasClass('item')) {
+          if (!wrapper.length) {
+            wrapper = parent.clone().removeClass('active').html('');
+          }
+          $item.unwrap();
+        }
+        var itemGroup = [$item];
+        for (var x = 1; x < visibleCnt; x++) {
+          var a = i + x;
+          var next = $(items[a]);
+          if (!next.length) {
+            next = $(items[(a - $(items).length)]);
+          }
+          itemGroup[x] = next.clone();
+        }
+        var newSet = wrapper.clone().html(itemGroup);
+        if (i == 0) {
+          newSet.addClass('active');
+        }
+        newSet.appendTo($inner);
+      }
+    }
+  });
+</script>
+
+</head>
+
+<body>
+<!--carousel-->
+<section> <!--carousel-->
+  <div id="example" class="carousel slide" data-ride="carousel" style="width: 98%;background-color:slategrey;">
+  
+  <div class="carousel-inner" >
+  
+  <ul class="row item active" style="list-style-type: none;"> 
+  
+  <li class="col-xs-2">
+  
+  <a target="_blank" href="/vege" >
+  <figure>
+  <img src="/images/vege.jpg" alt="Trulli" style="width: 200px;height:140px;" class="img-responsive">
+  <figcaption >Vegetables</figcaption>
+  </figure>
+  </a>
+  
+  </li>
+  
+  <li class="col-xs-2">
+  
+  <a target="_blank" href="/jewellery" >
+  <figure>
+  <img src="/images/jwell.jpg" alt="Trulli" style="width: 170px;height:140px;" class="img-responsive">
+  <figcaption>Jewellery</figcaption>
+  </figure>
+  </a>
+  
+  </li>
+  
+  <li class="col-xs-2">
+  
+  <a target="_blank" href="/pulses">
+  <figure>
+  <img src="/images/pul.jpg" alt="Trulli" style="width: 200px;height:140px;" class="img-responsive">
+  <figcaption>Pulses</figcaption>
+  </figure>
+  </a>
+  
+  </li>
+  <li class="col-xs-2">
+  
+  <a target="_blank" href="/fruits">
+  <figure>
+  <img src="/images/fru.jpg" alt="Trulli" style="width: 200px;height:140px;" class="img-responsive">
+  <figcaption>Fruits</figcaption>
+  </figure>
+  </a>
+  
+  </li>
+  <li class="col-xs-2">
+  
+  <a target="_blank" href="/raw">
+  <figure>
+  <img src="/images/whole.jpg" alt="Trulli" style="width: 200px;height:140px;" class="img-responsive">
+  <figcaption>Whole</figcaption>
+  </figure>
+  </a>
+  
+  </li>
+  <li class="col-xs-2">
+  
+  <a target="_blank" href="/spices">
+  <figure>
+  <img src="/images/spice.jpg" alt="Trulli" style="width: 200px;height:140px;" class="img-responsive">
+  <figcaption>Spice</figcaption>
+  </figure>
+  </a>
+  
+  </li>
+  </ul>
+  
+  <ul class="row item" style="list-style-type: none;">
+  
+  <li class="col-xs-2">
+  
+  <a target="_blank" href="/bag">
+  <figure>
+  <img src="/images/bag.jpg" alt="Trulli" style="width: 120px;height:140px;" class="img-responsive">
+  <figcaption>Bag</figcaption>
+  </figure>
+  </a>
+  
+  </li>
+  
+  <li class="col-xs-2">
+  
+  <a target="_blank" href="/toy">
+  <figure>
+  <img src="/images/toy.jpg" alt="Trulli" style="width: 200px;height:140px;" class="img-responsive">
+  <figcaption>Toy</figcaption>
+  </figure>
+  </a>
+  
+  </li>
+  
+  <li class="col-xs-2">
+  
+  <a target="_blank" href="/pf">
+  <figure>
+  <img src="/images/pf.jpg" alt="Trulli" style="width: 200px;height:140px;" class="img-responsive">
+  <figcaption>PF</figcaption>
+  </figure>
+  </a>
+  
+  </li>
+  <li class="col-xs-2">
+  
+  <a target="_blank" href="/dairy">
+  <figure>
+  <img src="/images/dairy.jpg" alt="Trulli" style="width: 200px;height:140px;" class="img-responsive">
+  <figcaption>Dairy</figcaption>
+  </figure>
+  </a>
+  
+  </li>
+  </ul>
+      </div>
+  
+    <a class="carousel-control left" href="#example" data-slide="prev"></a>
+  
+    <a class="carousel-control right" href="#example" data-slide="next"></a>
+
+    
+  </div></section>
+
+  
+<br>
+<br>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/javascripts/slider.js"></script>
+    
+        <div class="header" id="myHeader">
+            <h2 >PULSES</h2>
+           
+          </div>
+          <p style="
+          width: 100%;
+          height: 100px;
+          background-color: #071029;
+          color: white;
+          font-size:20px;
+          display: none;
+          padding:20px; text-align: center;"
+         > Different types of pulses are available here.
+        </p>
+          <div class="content">
+              <script>
+                  window.onscroll = function() {myFunction()};
+                  
+                  var header = document.getElementById("myHeader");
+                  var sticky = header.offsetTop;
+                  
+                  function myFunction() {
+                    if (window.pageXOffset > sticky) {
+                      header.classList.add("sticky");
+                    } else {
+                      header.classList.add("sticky");
+                    }
+                  }
+                  </script>
+                  <!--<div class="sticky">RAW MATERIAL</div>-->
+          
+           <div id="material">
+             <img src="/images/pul1.jpg" height="100px" width="150px" >
+             <figcaption>Rajma</figcaption>
+             <br>
+            
+            <table width="100%" height="auto" border="0px solid red">
+              <tr>
+                <td align="left">
+                 1 kg
+                </td> 
+                <td align="right"> ₹50</td>
+              </tr>
+              <tr>
+                  <td align="left">
+                   SOLD BY
+                  </td> 
+                  <td align="right"><a href="#">SELLER</a></td>
+                </tr>
+                <tr><td colspan="2" style="position: relative;">
+               <button > ADD TO CART </button>
+
+                </td></tr>
+            </table>
+            </div>
+            <div id="material">
+                <img src="/images/pul2.png" height="100px" width="150px" >
+                <figcaption>Chhole</figcaption>
+                
+                <br>
+                <table width="100%" height="auto" border="0px solid red">
+                    <tr>
+                      <td align="left">
+                       1 kg
+                      </td> 
+                      <td align="right"> ₹50</td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                         SOLD BY
+                        </td> 
+                        <td align="right"><a href="#">SELLER</a></td>
+                      </tr>
+                      <tr><td colspan="2" style="position: relative;">
+                     <button > ADD TO CART </button>
+    
+                      </td></tr>
+                  </table>
+               </div>
+               <div id="material">
+                  <img src="/images/pul3.jpg" height="100px" width="150px" >
+                  <figcaption>Arhar Dal</figcaption>
+                  
+                  <br>
+                  <table width="100%" height="auto" border="0px solid red">
+                      <tr>
+                        <td align="left">
+                         1 kg
+                        </td> 
+                        <td align="right"> ₹50</td>
+                      </tr>
+                      <tr>
+                          <td align="left">
+                           SOLD BY
+                          </td> 
+                          <td align="right"><a href="#">SELLER</a></td>
+                        </tr>
+                        <tr><td colspan="2" style="position: relative;">
+                       <button > ADD TO CART </button>
+      
+                        </td></tr>
+                    </table>
+                 </div>
+                 <div id="material">
+                    <img src="/images/pul4.png" height="100px" width="150px" >
+                    <figcaption>Toor Dal</figcaption>
+                    
+                    <br>
+                    <table width="100%" height="auto" border="0px solid red">
+                        <tr>
+                          <td align="left">
+                           1 kg
+                          </td> 
+                          <td align="right"> ₹50</td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                             SOLD BY
+                            </td> 
+                            <td align="right"><a href="#">SELLER</a></td>
+                          </tr>
+                          <tr><td colspan="2" style="position: relative;">
+                         <button > ADD TO CART </button>
+        
+                          </td></tr>
+                      </table>
+                   </div>
+                   <div id="material">
+             <img src="/images/pul5.jpg" height="100px" width="150px" >
+             <figcaption>Kabuli Chana</figcaption> 
+             <br>
+            
+             <table width="100%" height="auto" border="0px solid red">
+                <tr>
+                  <td align="left">
+                   1 kg
+                  </td> 
+                  <td align="right"> ₹50</td>
+                </tr>
+
+                <tr>
+                    <td align="left">
+                     SOLD BY
+                    </td> 
+                    <td align="right"><a href="#">SELLER</a></td>
+                  </tr>
+                  <tr><td colspan="2" style="position: relative;">
+                 <button > ADD TO CART </button>
+
+                  </td></tr>
+              </table>
+            </div>
+            
+           <div id="material">
+              <img src="/images/pul6.png" height="100px" width="150px" >
+              <figcaption>Chana Dal</figcaption>
+              <br>
+            
+              <table width="100%" height="auto" border="0px solid red">
+                  <tr>
+                    <td align="left">
+                     1 kg
+                    </td> 
+                    <td align="right"> ₹50</td>
+                  </tr>
+                  <tr>
+                      <td align="left">
+                       SOLD BY
+                      </td> 
+                      <td align="right"><a href="#">SELLER</a></td>
+                    </tr>
+                    <tr><td colspan="2" style="position: relative;">
+                   <button > ADD TO CART </button>
+  
+                    </td></tr>
+                </table>
+             </div>
+             <div id="material">
+                 <img src="/images/pul7.jpg" height="100px" width="150px" >
+                 <figcaption>Moong Dal</figcaption>
+                 <br>
+                 
+                 <table width="100%" height="auto" border="0px solid red">
+                    <tr>
+                      <td align="left">
+                       1 kg
+                      </td> 
+                      <td align="right"> ₹50</td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                         SOLD BY
+                        </td> 
+                        <td align="right"><a href="#">SELLER</a></td>
+                      </tr>
+                      <tr><td colspan="2" style="position: relative;">
+                     <button > ADD TO CART </button>
+    
+                      </td></tr>
+                  </table>
+                </div>
+                <div id="material">
+                   <img src="/images/pul8.jpg" height="100px" width="150px" >
+                   <figcaption>Peeli Masoor</figcaption>
+                   <br>
+                   
+                   <table width="100%" height="auto" border="0px solid red">
+                      <tr>
+                        <td align="left">
+                         1 kg
+                        </td> 
+                        <td align="right"> ₹50</td>
+                      </tr>
+                      <tr>
+                          <td align="left">
+                           SOLD BY
+                          </td> 
+                          <td align="right"><a href="#">SELLER</a></td>
+                        </tr>
+                        <tr><td colspan="2" style="position: relative;">
+                       <button > ADD TO CART </button>
+      
+                        </td></tr>
+                    </table>
+                  </div>
+                  <div id="material">
+                     <img src="/images/pul9.jpg" height="100px" width="150px" >
+                     <figcaption>Kaali Masoor</figcaption>
+                     <br>
+                    
+                     <table width="100%" height="auto" border="0px solid red">
+                        <tr>
+                          <td align="left">
+                           1 kg
+                          </td> 
+                          <td align="right"> ₹50</td>
+                        </tr>
+                        <tr>
+                            <td align="left">
+                             SOLD BY
+                            </td> 
+                            <td align="right"><a href="#">SELLER</a></td>
+                          </tr>
+                          <tr><td colspan="2" style="position: relative;">
+                         <button > ADD TO CART </button>
+        
+                          </td></tr>
+                      </table>
+                    </div>
+                    <div id="material">
+              <img src="/images/pul10.jpg" height="100px" width="150px" >
+             <figcaption>Rajma</figcaption>
+             <br>
+             <table width="100%" height="auto" border="0px solid red">
+                <tr>
+                  <td align="left">
+                   1 kg
+                  </td> 
+                  <td align="right"> ₹50</td>
+                </tr>
+                <tr>
+                    <td align="left">
+                     SOLD BY
+                    </td> 
+                    <td align="right"><a href="#">SELLER</a></td>
+                  </tr>
+                  <tr><td colspan="2" style="position: relative;">
+                 <button > ADD TO CART </button>
+
+                  </td></tr>
+              </table>
+             </div>
+             <footer>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <h4>HOME</h4>
+                    <h5><a href="#">Login</a></h5>
+                    <h5><a href="/signup">Register</a></h5>
+                    <h5><a href="/sellers">Subscribe</a></h5>
+                  </div>
+            
+                  <div class="col-sm-4">
+                    <h4>NEWS</h4>
+                    <h5><a href="#">News Updates</a></h5>
+                    <h5><a href="#">Media Coverage</a></h5>
+                    
+                    <h5><a href="#">Reflections</a></h5>
+                    <h5><a href="#">Newsletter</a></h5>
+            
+                  </div>
+                  
+                  <div class="col-sm-4">
+                      <h4>NM LIBRARY</h4>
+                      <h5><a href="/buyers">Buyers</a></h5>
+                      <h5><a href="#">Sellers</a></h5>
+                      
+                      <h5><a href="/gallery">Gallery</a></h5>
+                      <h5><a href="#">E-Greetings</a></h5>
+            
+                    </div>
+                </div>
+                <div class="row" style="margin-left: 10px;">
+                <h4>Connect With Us : </h4>
+                
+                <a href="https://www.facebook.com/"><span style="height:150px;width: 50px;border-top-left-radius: 2px;
+                border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-facebook-square"></i></span></a>
+                  <a href="https://www.twitter.com/"><span style="height:150px;width: 50px;border-top-left-radius: 2px;
+                border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-twitter"></i></span></a>
+                  <a href="https://www.in.pinterest.com/"><span style="height:150px;width: 50px;border-top-left-radius: 2px;
+                border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-pinterest"></i></span></a>
+                  <a href="https://www.plus.google.com/"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+                border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-google-plus"></i></span></a>
+                  <a href="https://www.youtube.com/"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+                border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-youtube"></i></span></a>
+                  <a href="https://in.linkedin.com/"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+                border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-linkedin-in"></i></span></a>
+                  <a href="https://www.instagram.com/simigitika"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+                border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-instagram"></i></span></a>
+                  
+            <style type="text/css">iframe.goog-te-banner-frame{ display: none !important;}</style>
+            <style type="text/css">body {position: static !important; top:0px !important;}</style>
+            <style type="text/css">.goog-te-gadget-icon{
+            background:none !important;
+            }</style>
+            <style>
+            .goog-tooltip {
+            display: none !important;
+            }
+            .goog-tooltip:hover {
+            display: none !important;
+            }
+            .goog-text-highlight {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            }
+            </style>
+            <div class="col-sm-6 col-md-6 col-lg-6" style="float:right">
+            <div id="google_translate_element" ></div><script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            }
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+            </script>
+            </div>
+            
+                </div>
+            </footer>
+            
+</body>
+</html>

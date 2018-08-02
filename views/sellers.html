@@ -1,0 +1,936 @@
+<html>
+	<head>
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style type="text/css">
+			
+	.form-control {
+		box-shadow: none;		
+		font-weight: normal;
+		font-size: 13px;
+	}
+	.form-control:focus {
+		border-color: #33cabb;
+		box-shadow: 0 0 8px rgba(0,0,0,0.1);
+	}
+	.navbar-header.col {
+		padding: 0 !important;
+	}	
+	.navbar {
+		background: #fff;
+		padding-left: 16px;
+		padding-right: 16px;
+		border-bottom: 1px solid #dfe3e8;
+		border-radius: 0;
+	}
+	.nav-link img {
+		border-radius: 50%;
+		width: 36px;
+		height: 36px;
+		margin: -8px 0;
+		float: left;
+		margin-right: 10px;
+	}
+	.navbar .navbar-brand, .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
+		padding-left: 0;
+		font-size: 20px;
+		padding-right: 50px;
+	}
+	.navbar .navbar-brand b {
+		font-weight: bold;
+		color: #33cabb;		
+	}
+	.navbar .form-inline {
+        display: inline-block;
+    }
+	.navbar .nav li {
+		position: relative;
+	}
+	.navbar .nav li a {
+		color: #888;
+	}
+	.search-box {
+        position: relative;
+    }	
+    .search-box input {
+        padding-right: 35px;
+		border-color: #dfe3e8;
+        border-radius: 4px !important;
+		box-shadow: none
+    }
+	.search-box .input-group-addon {
+        min-width: 35px;
+        border: none;
+        background: transparent;
+        position: absolute;
+        right: 0;
+        z-index: 9;
+        padding: 7px;
+		height: 100%;
+    }
+    .search-box i {
+        color: #a0a5b1;
+		font-size: 19px;
+    }
+	.navbar .nav .btn-primary, .navbar .nav .btn-primary:active {
+		color: #fff;
+		background: #33cabb;
+		padding-top: 8px;
+		padding-bottom: 6px;
+		vertical-align: middle;
+		border: none;
+	}	
+	.navbar .nav .btn-primary:hover, .navbar .nav .btn-primary:focus {		
+		color: #fff;
+		outline: none;
+		background: #31bfb1;
+	}
+	.navbar .navbar-right li:first-child a {
+		padding-right: 30px;
+	}
+	.navbar .nav-item i {
+		font-size: 18px;
+	}
+	.navbar .dropdown-item i {
+		font-size: 16px;
+		min-width: 22px;
+	}
+	.navbar ul.nav li.active a, .navbar ul.nav li.open > a {
+		background: transparent !important;
+	}	
+	.navbar .nav .get-started-btn {
+		min-width: 120px;
+		margin-top: 8px;
+		margin-bottom: 8px;
+	}
+	.navbar ul.nav li.open > a.get-started-btn {
+		color: #fff;
+		background: #31bfb1 !important;
+	}
+	.navbar .dropdown-menu {
+		border-radius: 1px;
+		border-color: #e5e5e5;
+		box-shadow: 0 2px 8px rgba(0,0,0,.05);
+	}
+	.navbar .nav .dropdown-menu li {
+		color: #999;
+		font-weight: normal;
+	}
+	.navbar .nav .dropdown-menu li a, .navbar .nav .dropdown-menu li a:hover, .navbar .nav .dropdown-menu li a:focus {
+		padding: 8px 20px;
+		line-height: normal;
+	}
+	.navbar .navbar-form {
+		border: none;
+	}
+	.navbar .dropdown-menu.form-wrapper {
+		width: 280px;
+		padding: 20px;
+		left: auto;
+		right: 0;
+        font-size: 14px;
+	}
+	.navbar .dropdown-menu.form-wrapper a {		
+		color: #33cabb;
+		padding: 0 !important;
+	}
+	.navbar .dropdown-menu.form-wrapper a:hover{
+		text-decoration: underline;
+	}
+	.navbar .form-wrapper .hint-text {
+		text-align: center;
+		margin-bottom: 15px;
+		font-size: 13px;
+	}
+	.navbar .form-wrapper .social-btn .btn, .navbar .form-wrapper .social-btn .btn:hover {
+		color: #fff;
+        margin: 0;
+		padding: 0 !important;
+		font-size: 13px;
+		border: none;
+		transition: all 0.4s;
+		text-align: center;
+		line-height: 34px;
+		width: 47%;
+		text-decoration: none;
+    }	
+	.navbar .social-btn .btn-primary {
+		background: #507cc0;
+	}
+	.navbar .social-btn .btn-primary:hover {
+		background: #4676bd;
+	}
+	.navbar .social-btn .btn-info {
+		background: #64ccf1;
+	}
+	.navbar .social-btn .btn-info:hover {
+		background: #4ec7ef;
+	}
+	.navbar .social-btn .btn i {
+		margin-right: 5px;
+		font-size: 16px;
+		position: relative;
+		top: 2px;
+	}
+	.navbar .form-wrapper .form-footer {
+		text-align: center;
+		padding-top: 10px;
+		font-size: 13px;
+	}
+	.navbar .form-wrapper .form-footer a:hover{
+		text-decoration: underline;
+	}
+	.navbar .form-wrapper .checkbox-inline input {
+		margin-top: 3px;
+	}
+	.or-seperator {
+        margin-top: 32px;
+		text-align: center;
+		border-top: 1px solid #e0e0e0;
+    }
+    .or-seperator b {
+		color: #666;
+        padding: 0 8px;
+		width: 30px;
+		height: 30px;
+		font-size: 13px;
+		text-align: center;
+		line-height: 26px;
+		background: #fff;
+		display: inline-block;
+		border: 1px solid #e0e0e0;
+		border-radius: 50%;
+		position: relative;
+		top: -15px;
+		z-index: 1;
+    }
+    .navbar .checkbox-inline {
+		font-size: 13px;
+	}
+	.navbar .navbar-right .dropdown-toggle::after {
+		display: none;
+	}
+	@media (min-width: 1200px){
+		.form-inline .input-group {
+			width: 300px;
+			margin-left: 30px;
+		}
+	}
+	@media (max-width: 768px){
+		.navbar .dropdown-menu.form-wrapper {
+			max-width: 100%;
+			padding: 10px 15px;
+			background: transparent;
+			border: none;
+		}
+		.navbar .form-inline {
+			display: block;
+		}
+		.navbar .input-group {
+			max-width: 100%;
+		}
+		.navbar .nav .btn-primary, .navbar .nav .btn-primary:active {
+			display: block;
+			min-width: 48px;
+			min-height: 48px;
+		}
+	}
+			
+			body {
+				color: #566787;
+				background: #f5f5f5;
+				font-family: 'Varela Round', sans-serif;
+				font-size: 13px;
+			}
+			.table-wrapper {
+				background: #fff;
+				padding: 20px 25px;
+				margin: 30px 0;
+				border-radius: 3px;
+				box-shadow: 0 1px 1px rgba(0,0,0,.05);
+			}
+			.table-title {        
+				padding-bottom: 15px;
+				background: #435d7d;
+				color: #fff;
+				padding: 16px 30px;
+				margin: -20px -25px 10px;
+				border-radius: 3px 3px 0 0;
+			}
+			.table-title h2 {
+				margin: 5px 0 0;
+				font-size: 24px;
+			}
+			.table-title .btn-group {
+				float: right;
+			}
+			.table-title .btn {
+				color: #fff;
+				float: right;
+				font-size: 13px;
+				border: none;
+				min-width: 50px;
+				border-radius: 2px;
+				border: none;
+				outline: none !important;
+				margin-left: 10px;
+			}
+			.table-title .btn i {
+				float: left;
+				font-size: 21px;
+				margin-right: 5px;
+			}
+			.table-title .btn span {
+				float: left;
+				margin-top: 2px;
+			}
+			table.table tr th, table.table tr td {
+				border-color: #e9e9e9;
+				padding: 12px 15px;
+				vertical-align: middle;
+			}
+			table.table tr th:first-child {
+				width: 60px;
+			}
+			table.table tr th:last-child {
+				width: 100px;
+			}
+			table.table-striped tbody tr:nth-of-type(odd) {
+				background-color: #fcfcfc;
+			}
+			table.table-striped.table-hover tbody tr:hover {
+				background: #f5f5f5;
+			}
+			table.table th i {
+				font-size: 13px;
+				margin: 0 5px;
+				cursor: pointer;
+			}	
+			table.table td:last-child i {
+				opacity: 0.9;
+				font-size: 22px;
+				margin: 0 5px;
+			}
+			table.table td a {
+				font-weight: bold;
+				color: #566787;
+				display: inline-block;
+				text-decoration: none;
+				outline: none !important;
+			}
+			table.table td a:hover {
+				color: #2196F3;
+			}
+			table.table td a.edit {
+				color: #FFC107;
+			}
+			table.table td a.delete {
+				color: #F44336;
+			}
+			table.table td i {
+				font-size: 19px;
+			}
+			table.table .avatar {
+				border-radius: 50%;
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+			.pagination {
+				float: right;
+				margin: 0 0 5px;
+			}
+			.pagination li a {
+				border: none;
+				font-size: 13px;
+				min-width: 30px;
+				min-height: 30px;
+				color: #999;
+				margin: 0 2px;
+				line-height: 30px;
+				border-radius: 2px !important;
+				text-align: center;
+				padding: 0 6px;
+			}
+			.pagination li a:hover {
+				color: #666;
+			}	
+			.pagination li.active a, .pagination li.active a.page-link {
+				background: #03A9F4;
+			}
+			.pagination li.active a:hover {        
+				background: #0397d6;
+			}
+			.pagination li.disabled i {
+				color: #ccc;
+			}
+			.pagination li i {
+				font-size: 16px;
+				padding-top: 6px
+			}
+			.hint-text {
+				float: left;
+				margin-top: 10px;
+				font-size: 13px;
+			}    
+			/* Custom checkbox */
+			.custom-checkbox {
+				position: relative;
+			}
+			.custom-checkbox input[type="checkbox"] {    
+				opacity: 0;
+				position: absolute;
+				margin: 5px 0 0 3px;
+				z-index: 9;
+			}
+			.custom-checkbox label:before{
+				width: 18px;
+				height: 18px;
+			}
+			.custom-checkbox label:before {
+				content: '';
+				margin-right: 10px;
+				display: inline-block;
+				vertical-align: text-top;
+				background: white;
+				border: 1px solid #bbb;
+				border-radius: 2px;
+				box-sizing: border-box;
+				z-index: 2;
+			}
+			.custom-checkbox input[type="checkbox"]:checked + label:after {
+				content: '';
+				position: absolute;
+				left: 6px;
+				top: 3px;
+				width: 6px;
+				height: 11px;
+				border: solid #000;
+				border-width: 0 3px 3px 0;
+				transform: inherit;
+				z-index: 3;
+				transform: rotateZ(45deg);
+			}
+			.custom-checkbox input[type="checkbox"]:checked + label:before {
+				border-color: #03A9F4;
+				background: #03A9F4;
+			}
+			.custom-checkbox input[type="checkbox"]:checked + label:after {
+				border-color: #fff;
+			}
+			.custom-checkbox input[type="checkbox"]:disabled + label:before {
+				color: #b8b8b8;
+				cursor: auto;
+				box-shadow: none;
+				background: #ddd;
+			}
+			/* Modal styles */
+			.modal .modal-dialog {
+				max-width: 400px;
+			}
+			.modal .modal-header, .modal .modal-body, .modal .modal-footer {
+				padding: 20px 30px;
+			}
+			.modal .modal-content {
+				border-radius: 3px;
+			}
+			.modal .modal-footer {
+				background: #ecf0f1;
+				border-radius: 0 0 3px 3px;
+			}
+			.modal .modal-title {
+				display: inline-block;
+			}
+			.modal .form-control {
+				border-radius: 2px;
+				box-shadow: none;
+				border-color: #dddddd;
+			}
+			.modal textarea.form-control {
+				resize: vertical;
+			}
+			.modal .btn {
+				border-radius: 2px;
+				min-width: 100px;
+			}	
+			.modal form label {
+				font-weight: normal;
+			}	
+		</style>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			// Activate tooltip
+			$('[data-toggle="tooltip"]').tooltip();
+			
+			// Select/Deselect checkboxes
+			var checkbox = $('table tbody input[type="checkbox"]');
+			$("#selectAll").click(function(){
+				if(this.checked){
+					checkbox.each(function(){
+						this.checked = true;                        
+					});
+				} else{
+					checkbox.each(function(){
+						this.checked = false;                        
+					});
+				} 
+			});
+			checkbox.click(function(){
+				if(!this.checked){
+					$("#selectAll").prop("checked", false);
+				}
+			});
+		});
+		</script>
+	</head>
+	<body>
+
+		<div class="container-fluid">
+		<header>
+				<nav class="navbar navbar-default navbar-expand-lg navbar-light">
+						<div class="row">
+				  
+					<div class="navbar-header d-flex col col-sm-3">
+					  <a class="navbar-brand" href="/">
+					<img src="/images/third.jpg" style="border-bottom-left-radius: 20px;
+					border-top-right-radius: 20px;border-bottom-right-radius: 20px;
+					border-top-left-radius: 20px;height: 180px;width: 80px; padding-top: 40px;">
+					  </div>
+					  <div class="navbar-header d-flex col col-sm-9">
+						  <b style="position: relative; margin-left: 100px;margin-top:-15px;">
+							Deendayal Antyodaya Yojana-
+							  National Urban Livelihoods Mission (DAY-NULM) <br><br>
+						  <b style="position: relative; margin-left: 100px;font-size: 25px;
+						  color:#850C4D;">Ministry of Housing and Urban Affairs<br><br>
+						  <b style="position: relative; margin-left: 100px;">Government of India
+									  </b></a>  	
+					  </div>
+					
+					  <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle 
+					  navbar-toggler ml-auto">
+						<span class="navbar-toggler-icon"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+					</div>
+					<!-- Collection of nav links, forms, and other content for toggling -->
+					<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+					  <br><br><br> <ul class="nav navbar-nav" style="position: relative;">
+						<li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+						<li class="nav-item"><a href="/about" class="nav-link">About DAY</a></li>			
+						<li class="nav-item dropdown">
+						  <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">News
+							<b class="caret"></b></a>
+						  <ul class="dropdown-menu">					
+							<li><a href="#" class="dropdown-item">News Updates</a></li>
+							<li><a href="#" class="dropdown-item">Media Coverage</a></li>
+							<li><a href="#" class="dropdown-item">Reflections</a></li>
+							<li><a href="#" class="dropdown-item">Newsletter</a></li>
+						  </ul>
+						</li>
+						<li class="nav-item dropdown">
+						  <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Governance<b class="caret"></b></a>
+						  <ul class="dropdown-menu">					
+							<li><a href="#" class="dropdown-item">Governance Paradigm</a></li>
+							<li><a href="#" class="dropdown-item">Global Recognition</a></li>
+							<li><a href="#" class="dropdown-item">Infographics</a></li>
+							<li><a href="#" class="dropdown-item">Insights</a></li>
+						  </ul>
+						</li>
+						
+						<li class="nav-item active"><a href="/gallery" class="nav-link">Gallery</a></li>
+						</ul>
+					  <form class="navbar-form form-inline">
+						<div class="input-group search-box">								
+						  <input type="text" id="search" class="form-control"
+						   placeholder="Search here...">
+						  <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+						</div>
+					  </form>
+					  <ul class="nav navbar-nav navbar-right ml-auto">			
+						<li class="nav-item" style="clear: right;">
+						  <a  href="/">Logout</a>
+						  <!-- <ul class="dropdown-menu form-wrapper">					
+							<li>
+							  <form action="/sellers/index" method="post">
+								<p class="hint-text">Sign in with your social media account</p>
+								<div class="form-group social-btn clearfix">
+								  <a href="#" class="btn btn-primary pull-left"><i class="fa fa-facebook"></i> Facebook</a>
+								  <a href="#" class="btn btn-info pull-right"><i class="fa fa-twitter"></i> Twitter</a>
+								</div>
+								<div class="or-seperator"><b>or</b></div>
+								<div class="form-group">
+								  <input type="text" class="form-control" placeholder="Username" required="required">
+								</div>
+								<div class="form-group">
+								  <input type="password" class="form-control" placeholder="Password" required="required">
+								</div>
+								<input type="submit" class="btn btn-primary btn-block" value="Login">
+								<div class="form-footer">
+								  <a href="#">Forgot Your password?</a>
+								</div>
+							  </form>
+							</li>
+						  </ul> -->
+						</li> 
+						<!-- <li class="nav-item"style="clear: right;">
+						  <a href="/signup" class="btn btn-primary ">Sign up</a>
+							</li> -->
+				  </nav>
+			  
+		</header>
+			<section>
+				<div class="container-page">				
+					<div class="col-md-12">
+						<br>
+						<h2 class="dark-grey"><b>Profile</b></h2>
+						<br>
+							
+						<div class="form-group col-lg-12">
+							<label><b>Username</b></label>
+							<input type="text" name="" class="form-control" id="" value="Pulkitgp">
+						</div>
+						
+						<div class="form-group col-lg-6">
+							<label><b>First name</b></label>
+							<input type="text" name="" class="form-control" id="" value="Pulkit">
+						</div>
+
+						<div class="form-group col-lg-6">
+								<label><b>Last name</b></label>
+								<input type="text" name="" class="form-control" id="" value="Gupta">
+						</div>
+
+						<div class="form-group col-lg-6">
+							<label><b>State</b></label>
+							<input type="text" name="" class="form-control" id="" value="New delhi">
+						</div>
+
+						<div class="form-group col-lg-6">
+							<label><b>Address</b></label>
+							<input type="text" name="" class="form-control" id="" value="Rohini">
+						</div>
+				
+						<div class="form-group col-lg-6">
+							<label><b>Category</label>
+							<input type="" name="" class="form-control" id="" value="Retail">
+						</div>
+							
+						<div class="form-group col-lg-6">
+							<label><b>Date of Birth</b></label>
+							<input type="" name="" class="form-control" id="" value="21/7/1998">
+						</div>
+								
+						<div class="form-group col-lg-6">
+							<label><b>Email Address</b></label>
+							<input type="" name="" class="form-control" id="" value="impulkit31@gmail.com">
+						</div>
+				
+						<div class="form-group col-lg-6">
+							<label><b>Phone Number</b></label>
+							<input type="" name="" class="form-control" id="" value="9876543210">
+						</div>
+							
+						<div class="form-group col-lg-6">
+							<label><b>Password</b></label>
+							<input type="password" name="" class="form-control" id="" value="pulkit">
+						</div>		
+					</div>
+			
+					<div>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<button type="submit" class="btn btn-primary">Edit profile</button>								</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="container">
+				<div class="table-wrapper">
+					<div class="table-title">
+						<div class="row">
+							<div class="col-sm-6">
+								<h2>Manage <b>Products</b></h2>
+							</div>
+							<div class="col-sm-6">
+								<a href="#addProductModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Product</span></a>
+								<a href="#deleteProductModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>						
+							</div>
+						</div>
+					</div>
+					<table class="table table-striped table-hover">
+						<thead>
+							<tr>
+								<th>
+									<span class="custom-checkbox">
+										<input type="checkbox" id="selectAll">
+										<label for="selectAll"></label>
+									</span>
+								</th>
+								<th>Product Name</th>
+								<th>Price</th>
+								<th>Quantity</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<span class="custom-checkbox">
+										<input type="checkbox" id="checkbox1" name="options[]" value="1">
+										<label for="checkbox1"></label>
+									</span>
+								</td>
+								<td>Rajma</td>
+								<td>400</td>
+								<td>100</td>
+								<td>
+									<a href="#editProductModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+									<a href="#deleteProductModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="custom-checkbox">
+										<input type="checkbox" id="checkbox2" name="options[]" value="1">
+										<label for="checkbox2"></label>
+									</span>
+								</td>
+								<td>Sugar</td>
+								<td>43</td>
+								<td>437</td>
+								<td>
+									<a href="#editProductModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+									<a href="#deleteProductModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="custom-checkbox">
+										<input type="checkbox" id="checkbox3" name="options[]" value="1">
+										<label for="checkbox3"></label>
+									</span>
+								</td>
+								<td>Musturd Oil</td>
+								<td>100</td>
+								<td>250</td>
+								<td>
+									<a href="#editProductModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+									<a href="#deleteProductModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="custom-checkbox">
+										<input type="checkbox" id="checkbox4" name="options[]" value="1">
+										<label for="checkbox4"></label>
+									</span>
+								</td>
+								<td>Tea</td>
+								<td>324</td>
+								<td>124</td>
+								<td>
+									<a href="#editProductModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+									<a href="#deleteProductModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+								</td>
+							</tr>					
+							<tr>
+								<td>
+									<span class="custom-checkbox">
+										<input type="checkbox" id="checkbox5" name="options[]" value="1">
+										<label for="checkbox5"></label>
+									</span>
+								</td>
+								<td>Peanuts</td>
+								<td>576</td>
+								<td>176</td>
+								<td>
+									<a href="#editProductModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+									<a href="#deleteProductModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+								</td>
+							</tr> 
+						</tbody>
+					</table>
+					<div class="clearfix">
+						<div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+						<ul class="pagination">
+							<li class="page-item disabled"><a href="#">Previous</a></li>
+							<li class="page-item"><a href="#" class="page-link">1</a></li>
+							<li class="page-item"><a href="#" class="page-link">2</a></li>
+							<li class="page-item active"><a href="#" class="page-link">3</a></li>
+							<li class="page-item"><a href="#" class="page-link">4</a></li>
+							<li class="page-item"><a href="#" class="page-link">5</a></li>
+							<li class="page-item"><a href="#" class="page-link">Next</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Edit Modal HTML -->
+			<div id="addProductModal" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<form>
+							<div class="modal-header">						
+								<h4 class="modal-title">Add Product</h4>
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							</div>
+							<div class="modal-body">					
+								<div class="form-group">
+									<label>Product Name</label>
+									<input type="text" class="form-control" required>
+								</div>
+								<div class="modal-body">					
+										<div class="form-group">
+											<label>Price</label>
+											<input type="text" class="form-control" required>
+										</div>
+									
+								<div class="form-group">
+									<label>Quantity</label>
+									<input type="number" class="form-control" required>
+								</div>				
+							</div>
+							<div class="modal-footer">
+								<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+								<input type="submit" class="btn btn-success" value="Add">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- Edit Modal HTML -->
+			<div id="editProductModal" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<form>
+							<div class="modal-header">						
+								<h4 class="modal-title">Edit Product</h4>
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							</div>
+							<div class="modal-body">					
+								<div class="form-group">
+									<label>Product Name</label>
+									<input type="text" class="form-control" required>
+								</div>
+								<div class="form-group">
+                                        <label>Price</label>
+                                        ₹<input type="text" class="form-control" required>
+                                    </div>
+								<div class="form-group">
+									<label>Quantity</label>
+									<input type="number" class="form-control" required>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+								<input type="submit" class="btn btn-info" value="Save">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- Delete Modal HTML -->
+			<div id="deleteProductModal" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<form>
+							<div class="modal-header">						
+								<h4 class="modal-title">Delete Product</h4>
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							</div>
+							<div class="modal-body">					
+								<p>Are you sure you want to delete these Records?</p>
+								<p class="text-warning"><small>This action cannot be undone.</small></p>
+							</div>
+							<div class="modal-footer">
+								<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+								<input type="submit" class="btn btn-danger" value="Delete">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<footer>
+					<div class="row">
+					  <div class="col-sm-4">
+						<h4>HOME</h4>
+						<h5><a href="#">Login</a></h5>
+						<h5><a href="/signup">Register</a></h5>
+						<h5><a href="/sellers">Subscribe</a></h5>
+					  </div>
+				
+					  <div class="col-sm-4">
+						<h4>NEWS</h4>
+						<h5><a href="#">News Updates</a></h5>
+						<h5><a href="#">Media Coverage</a></h5>
+						
+						<h5><a href="#">Reflections</a></h5>
+						<h5><a href="#">Newsletter</a></h5>
+				
+					  </div>
+					  
+					  <div class="col-sm-4">
+						  <h4>NM LIBRARY</h4>
+						  <h5><a href="/buyers">Buyers</a></h5>
+						  <h5><a href="#">Sellers</a></h5>
+						  
+						  <h5><a href="/gallery">Gallery</a></h5>
+						  <h5><a href="#">E-Greetings</a></h5>
+				
+						</div>
+					</div>
+					<div class="row" style="margin-left: 10px;">
+					  <h4>Connect With Us : </h4>
+					  
+					  <a href="https://www.facebook.com/"><span style="height:150px;width: 50px;border-top-left-radius: 2px;
+						border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-facebook-square"></i></span></a>
+					  <a href="https://www.twitter.com/"><span style="height:150px;width: 50px;border-top-left-radius: 2px;
+						border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-twitter"></i></span></a>
+					  <a href="https://www.in.pinterest.com/"><span style="height:150px;width: 50px;border-top-left-radius: 2px;
+						border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-pinterest"></i></span></a>
+					  <a href="https://www.plus.google.com/"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+						border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-google-plus"></i></span></a>
+					  <a href="https://www.youtube.com/"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+						border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-youtube"></i></span></a>
+					  <a href="https://in.linkedin.com/"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+						border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-linkedin-in"></i></span></a>
+					  <a href="https://www.instagram.com/simigitika"><span style="height:50px;width: 50px;border-top-left-radius: 2px;
+						border-top-right-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;"><i class="fa fa-instagram"></i></span></a>
+					  
+				<style type="text/css">iframe.goog-te-banner-frame{ display: none !important;}</style>
+				<style type="text/css">body {position: static !important; top:0px !important;}</style>
+				<style type="text/css">.goog-te-gadget-icon{
+				background:none !important;
+				}</style>
+				<style>
+				.goog-tooltip {
+				display: none !important;
+				}
+				.goog-tooltip:hover {
+				display: none !important;
+				}
+				.goog-text-highlight {
+				background-color: transparent !important;
+				border: none !important;
+				box-shadow: none !important;
+				}
+				</style>
+				<div class="col-sm-6 col-md-6 col-lg-6" style="float:right">
+				<div id="google_translate_element" ></div><script type="text/javascript">
+				function googleTranslateElementInit() {
+				  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+				}
+				</script>
+				<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+				</script>
+				</div>
+				
+					</div>
+				</footer>
+			</div>	
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Product Detail</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Product Name</td>
+            <td>:</td>
+            <td><%= seller.pname %></td>
+          </tr>
+          <tr>
+            <td>Price</td>
+            <td>:</td>
+            <td>₹<%= seller.price %></td>
+          </tr>
+          <tr>
+            <td>Quantity</td>
+            <td>:</td>
+            <td><%= seller.quantity %></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a href="/sellers/edit/<%= seller._id%>">EDIT</a></h3>
+      <form action="/sellers/delete/<%= seller._id%>" method="post">
+        <button type="submit">DELETE</button>
+      </form>
+    </div>
+  </body>
+</html>
